@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Clients_type_list extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name_short',
+        'full_name',
+        'status'
+    ];
 }
