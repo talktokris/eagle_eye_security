@@ -35,6 +35,7 @@
                 <div class="team-area-page">
                     <div class="container">
 
+                        <?php /*
                         <div class="row">
 
                             <div class="col-lg-6  dash-border">
@@ -147,32 +148,37 @@
                             </div>
 
                         </div>
-
+                        */ ?>
 
                         <div class="row">
 
+                            @foreach ($pageData as $row)
+
+
+
                             <div class="col-lg-6  dash-border">
-                                <h4 class="title" style="padding:1em;">Pharmacy</h4>
+                                <h4 class="title" style="padding:1em;">{{ $row->full_name}}</h4>
                                 <div class="row">
+                                    @foreach ($row->getAllClients as $item)
+
+
                                     <div class="col-lg-6 col-md-6">
                                         <div class="single-team-inner style-overlay text-center">
                                             <div class="thumb">
-                                                <img src="assets/img/clients/pharmacy/friends-pharmacy.jpg"
-                                                    alt="Security guard services client friends pharmacy">
+                                                <img src="{{url('assets/images/client')}}/{{ $item->id}}/{{ $item->client_logo_image}}"
+                                                    alt="Security guard services {{ $item->client_name}}">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="single-team-inner style-overlay text-center">
-                                            <div class="thumb">
-                                                <img src="assets/img/clients/pharmacy/iheal-medical-center.jpg"
-                                                    alt="Security guard services client iheal medical center">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
+
 
                                 </div>
                             </div>
+
+                            @endforeach
+
+                            <?php /*
 
                             <div class="col-lg-6  dash-border">
                                 <h4 class="title" style="padding:1em;">Residences</h4>
@@ -197,10 +203,11 @@
 
                                 </div>
                             </div>
-
+                            */?>
                         </div>
 
 
+                        <?php /*
                         <div class="row">
 
                             <div class="col-lg-6  dash-border">
@@ -306,6 +313,7 @@
                             </div>
 
                         </div>
+                        */ ?>
 
                     </div>
                 </div>

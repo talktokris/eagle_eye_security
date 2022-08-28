@@ -26,7 +26,7 @@
                                     Colorado. This means we need qualified professionals to join our team. We are
                                     looking for former police officers and ex-military members.</p>
                                 <div class="btn-wrap d-inline-block">
-                                    <a class="btn btn-border-base" href="contact.html">
+                                    <a class="btn btn-border-base" href="{{url('/contact')}}">
                                         <span class="top_left"></span>
                                         <span class="top_right"></span>
                                         <span>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="col-lg-5">
                             <div class="baner-img">
-                                <img src="./assets/img/section-img/baner/banar-img-01.png" alt="">
+                                <img src="{{ url('assets/img/section-img/baner/banar-img-01.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -143,8 +143,8 @@
                 <div class="col-lg-12">
                     <div class="theme-heading-title text-center">
                         <h4 class="subtitle yellow"><img class="bullet bullet-01"
-                                src="./assets/img/shapes/bullet-01-yellow.png" alt=""> Our Top Servcies
-                            <img class="bullet" src="./assets/img/shapes/bullet-yellow.png" alt="">
+                                src="{{url('assets/img/shapes/bullet-01-yellow.png')}}" alt=""> Our Top Servcies
+                            <img class="bullet" src="{{ url('assets/img/shapes/bullet-yellow.png')}}" alt="">
                         </h4>
                         <h2 class="title text-white">Well offers range of security services</h2>
                     </div>
@@ -152,10 +152,14 @@
             </div>
             <div class="team-wrapper">
                 <div class="team-active">
+                    @foreach ($pageData as $item)
+
+
+
                     <div class="team-items-single">
                         <div class="single-team-inner style-overlay">
                             <div class="thumb">
-                                <img src="./assets/img/section-img/team/team-image-01.png" alt="">
+                                <img src="{{ url('assets/images/services')}}/{{ $item->id }}/{{ $item->image_slider}}" alt="">
                                 <span class="animate-1"></span>
                                 <span class="animate-2"></span>
                                 <span class="animate-3"></span>
@@ -163,18 +167,20 @@
                             </div>
                             <div class="details">
                                 <div class="content">
-                                    <a href="team-details.html">
-                                        <h4 class="title">JHON HARISON</h4>
+                                    <a href="{{ url('/services')}}/{{ $item->link}}">
+                                        <h4 class="title">{{ $item->title_short}}</h4>
                                     </a>
-                                    <p>SPECIAL FORCE</p>
+                                    <p>{{ $item->title}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    @endforeach
                     <div class="team-items-single">
                         <div class="single-team-inner style-overlay">
                             <div class="thumb">
-                                <img src="./assets/img/section-img/team/team-image-02.png" alt="">
+                                <img src="{{ url('assets/images/services')}}/{{ $item->id }}/{{ $item->image_slider}}" alt="">
                                 <span class="animate-1"></span>
                                 <span class="animate-2"></span>
                                 <span class="animate-3"></span>
@@ -411,321 +417,91 @@
         </div>
         <div class="container">
             <div class="row">
+                @foreach ($pageData as $item)
+                <?php if(($item->id) <=4) { ?>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-single-item-list">
+                        <div class="service-single-item-2">
+                            <div class="thumb">
+                                <img src="{{url('assets/img/section-img/service/main')}}/{{$item->image_small}}" alt="">
+                                <div class="animate-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.888" height="43.888"
+                                        viewBox="0 0 43.888 43.888">
+                                        <g id="errrddt" data-name="Group 4112"
+                                            transform="translate(12737.236 -182.425)">
+                                            <circle id="Elldghdipse_242" data-name="Ellipse 242" cx="2.481" cy="2.481"
+                                                r="2.481" transform="translate(-12717.772 202.054)" fill="#ba1111">
+                                            </circle>
+                                            <path id="fda" data-name="Path 10606"
+                                                d="M3420.1,1564.089a7.7,7.7,0,1,1,7.7-7.7A7.705,7.705,0,0,1,3420.1,1564.089Zm0-15.108a7.412,7.412,0,1,0,7.412,7.411A7.42,7.42,0,0,0,3420.1,1548.981Z"
+                                                transform="translate(-16135.391 -1351.857)" fill="#ba1111"></path>
+                                            <path id="fgfylij" data-name="Path 10607"
+                                                d="M3433.511,1575.29A5.485,5.485,0,1,1,3439,1569.8,5.492,5.492,0,0,1,3433.511,1575.29Zm0-10.686a5.2,5.2,0,1,0,5.2,5.2A5.207,5.207,0,0,0,3433.511,1564.6Z"
+                                                transform="translate(-16148.803 -1365.269)" fill="#ba1111"></path>
+                                            <g id="fvbnnj" data-name="Group 4049"
+                                                transform="translate(-12728.114 191.994)">
+                                                <g id="jkktdfc" data-name="Group 4047">
+                                                    <rect id="Rectangldde_719" data-name="Rectangle 719" width="0.285"
+                                                        height="4.198" transform="translate(4.167)" fill="#484848">
+                                                    </rect>
+                                                    <rect id="ffdwejk" data-name="Rectangle 720" width="4.31"
+                                                        height="0.285" transform="translate(0 4.055)" fill="#484848">
+                                                    </rect>
+                                                    <rect id="Rectanjkgdfgle_721" data-name="Rectangle 721" width="4.31"
+                                                        height="0.285" transform="translate(21.283 4.055)"
+                                                        fill="#484848"></rect>
+                                                    <rect id="Rectangafaljhgle_722" data-name="Rectangle 722"
+                                                        width="0.285" height="4.198" transform="translate(21.141)"
+                                                        fill="#484848">
+                                                    </rect>
+                                                </g>
+                                                <g id="grdfh" data-name="Group 4048" transform="translate(0 20.841)">
+                                                    <rect id="fhhfh" data-name="Rectangle 723" width="0.285"
+                                                        height="4.198" transform="translate(21.141 0.142)"
+                                                        fill="#484848"></rect>
+                                                    <rect id="Rectangjkhkfle_724" data-name="Rectangle 724" width="4.31"
+                                                        height="0.285" transform="translate(21.283)" fill="#484848">
+                                                    </rect>
+                                                    <rect id="Rectangkuule_725" data-name="Rectangle 725" width="4.31"
+                                                        height="0.285" fill="#484848"></rect>
+                                                    <rect id="Rectangle_726" data-name="Rectangle 726" width="0.285"
+                                                        height="4.197" transform="translate(4.167 0.142)"
+                                                        fill="#484848"></rect>
+                                                </g>
+                                            </g>
+                                            <g id="asggfgf" data-name="Group 4050"
+                                                transform="translate(-12737.236 203.764)">
+                                                <path id="gggtrrr" data-name="Path 10608"
+                                                    d="M3548.683,1598.838h-10.752a.605.605,0,0,1,0-1.211h10.752a.605.605,0,0,1,0,1.211Z"
+                                                    transform="translate(-3505.4 -1597.627)" fill="#484848"></path>
+                                                <path id="Path_10609" data-name="Path 10609"
+                                                    d="M3323.189,1598.838h-10.867a.605.605,0,0,1,0-1.211h10.867a.605.605,0,1,1,0,1.211Z"
+                                                    transform="translate(-3311.717 -1597.627)" fill="#484848"></path>
+                                            </g>
+                                            <g id="yhujjj" data-name="Group 4051"
+                                                transform="translate(-12715.897 182.425)">
+                                                <path id="Path_10610" data-name="Path 10610"
+                                                    d="M3463.116,1684.4a.605.605,0,0,1-.6-.605v-10.752a.6.6,0,1,1,1.21,0V1683.8A.605.605,0,0,1,3463.116,1684.4Z"
+                                                    transform="translate(-3462.511 -1640.515)" fill="#484848"></path>
+                                                <path id="Path_10611" data-name="Path 10611"
+                                                    d="M3463.116,1458.911a.605.605,0,0,1-.6-.606v-10.867a.6.6,0,1,1,1.21,0v10.867A.605.605,0,0,1,3463.116,1458.911Z"
+                                                    transform="translate(-3462.511 -1446.833)" fill="#484848"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <h4 class="title"><a href="{{url('/services')}}/{{ $item->link}}">{{ $item->title_short}}</a></h4>
+                                <a class="read-btn" href="{{url('/services')}}/{{ $item->link}}"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-single-item-list">
-                        <div class="service-single-item-2">
-                            <div class="thumb">
-                                <img src="./assets/img/section-img/service/main/service-02.png" alt="">
-                                <div class="animate-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.888" height="43.888"
-                                        viewBox="0 0 43.888 43.888">
-                                        <g id="errrddt" data-name="Group 4112"
-                                            transform="translate(12737.236 -182.425)">
-                                            <circle id="Elldghdipse_242" data-name="Ellipse 242" cx="2.481" cy="2.481"
-                                                r="2.481" transform="translate(-12717.772 202.054)" fill="#ba1111">
-                                            </circle>
-                                            <path id="fda" data-name="Path 10606"
-                                                d="M3420.1,1564.089a7.7,7.7,0,1,1,7.7-7.7A7.705,7.705,0,0,1,3420.1,1564.089Zm0-15.108a7.412,7.412,0,1,0,7.412,7.411A7.42,7.42,0,0,0,3420.1,1548.981Z"
-                                                transform="translate(-16135.391 -1351.857)" fill="#ba1111"></path>
-                                            <path id="fgfylij" data-name="Path 10607"
-                                                d="M3433.511,1575.29A5.485,5.485,0,1,1,3439,1569.8,5.492,5.492,0,0,1,3433.511,1575.29Zm0-10.686a5.2,5.2,0,1,0,5.2,5.2A5.207,5.207,0,0,0,3433.511,1564.6Z"
-                                                transform="translate(-16148.803 -1365.269)" fill="#ba1111"></path>
-                                            <g id="fvbnnj" data-name="Group 4049"
-                                                transform="translate(-12728.114 191.994)">
-                                                <g id="jkktdfc" data-name="Group 4047">
-                                                    <rect id="Rectangldde_719" data-name="Rectangle 719" width="0.285"
-                                                        height="4.198" transform="translate(4.167)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="ffdwejk" data-name="Rectangle 720" width="4.31"
-                                                        height="0.285" transform="translate(0 4.055)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectanjkgdfgle_721" data-name="Rectangle 721" width="4.31"
-                                                        height="0.285" transform="translate(21.283 4.055)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectangafaljhgle_722" data-name="Rectangle 722"
-                                                        width="0.285" height="4.198" transform="translate(21.141)"
-                                                        fill="#484848">
-                                                    </rect>
-                                                </g>
-                                                <g id="grdfh" data-name="Group 4048" transform="translate(0 20.841)">
-                                                    <rect id="fhhfh" data-name="Rectangle 723" width="0.285"
-                                                        height="4.198" transform="translate(21.141 0.142)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectangjkhkfle_724" data-name="Rectangle 724" width="4.31"
-                                                        height="0.285" transform="translate(21.283)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectangkuule_725" data-name="Rectangle 725" width="4.31"
-                                                        height="0.285" fill="#484848"></rect>
-                                                    <rect id="Rectangle_726" data-name="Rectangle 726" width="0.285"
-                                                        height="4.197" transform="translate(4.167 0.142)"
-                                                        fill="#484848"></rect>
-                                                </g>
-                                            </g>
-                                            <g id="asggfgf" data-name="Group 4050"
-                                                transform="translate(-12737.236 203.764)">
-                                                <path id="gggtrrr" data-name="Path 10608"
-                                                    d="M3548.683,1598.838h-10.752a.605.605,0,0,1,0-1.211h10.752a.605.605,0,0,1,0,1.211Z"
-                                                    transform="translate(-3505.4 -1597.627)" fill="#484848"></path>
-                                                <path id="Path_10609" data-name="Path 10609"
-                                                    d="M3323.189,1598.838h-10.867a.605.605,0,0,1,0-1.211h10.867a.605.605,0,1,1,0,1.211Z"
-                                                    transform="translate(-3311.717 -1597.627)" fill="#484848"></path>
-                                            </g>
-                                            <g id="yhujjj" data-name="Group 4051"
-                                                transform="translate(-12715.897 182.425)">
-                                                <path id="Path_10610" data-name="Path 10610"
-                                                    d="M3463.116,1684.4a.605.605,0,0,1-.6-.605v-10.752a.6.6,0,1,1,1.21,0V1683.8A.605.605,0,0,1,3463.116,1684.4Z"
-                                                    transform="translate(-3462.511 -1640.515)" fill="#484848"></path>
-                                                <path id="Path_10611" data-name="Path 10611"
-                                                    d="M3463.116,1458.911a.605.605,0,0,1-.6-.606v-10.867a.6.6,0,1,1,1.21,0v10.867A.605.605,0,0,1,3463.116,1458.911Z"
-                                                    transform="translate(-3462.511 -1446.833)" fill="#484848"></path>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4 class="title"><a href="service.html">Local Guards</a></h4>
-                                <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-single-item-list">
-                        <div class="service-single-item-2">
-                            <div class="thumb">
-                                <img src="./assets/img/section-img/service/main/service-02.png" alt="">
-                                <div class="animate-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.888" height="43.888"
-                                        viewBox="0 0 43.888 43.888">
-                                        <g id="errrddt" data-name="Group 4112"
-                                            transform="translate(12737.236 -182.425)">
-                                            <circle id="Elldghdipse_242" data-name="Ellipse 242" cx="2.481" cy="2.481"
-                                                r="2.481" transform="translate(-12717.772 202.054)" fill="#ba1111">
-                                            </circle>
-                                            <path id="fda" data-name="Path 10606"
-                                                d="M3420.1,1564.089a7.7,7.7,0,1,1,7.7-7.7A7.705,7.705,0,0,1,3420.1,1564.089Zm0-15.108a7.412,7.412,0,1,0,7.412,7.411A7.42,7.42,0,0,0,3420.1,1548.981Z"
-                                                transform="translate(-16135.391 -1351.857)" fill="#ba1111"></path>
-                                            <path id="fgfylij" data-name="Path 10607"
-                                                d="M3433.511,1575.29A5.485,5.485,0,1,1,3439,1569.8,5.492,5.492,0,0,1,3433.511,1575.29Zm0-10.686a5.2,5.2,0,1,0,5.2,5.2A5.207,5.207,0,0,0,3433.511,1564.6Z"
-                                                transform="translate(-16148.803 -1365.269)" fill="#ba1111"></path>
-                                            <g id="fvbnnj" data-name="Group 4049"
-                                                transform="translate(-12728.114 191.994)">
-                                                <g id="jkktdfc" data-name="Group 4047">
-                                                    <rect id="Rectangldde_719" data-name="Rectangle 719" width="0.285"
-                                                        height="4.198" transform="translate(4.167)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="ffdwejk" data-name="Rectangle 720" width="4.31"
-                                                        height="0.285" transform="translate(0 4.055)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectanjkgdfgle_721" data-name="Rectangle 721" width="4.31"
-                                                        height="0.285" transform="translate(21.283 4.055)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectangafaljhgle_722" data-name="Rectangle 722"
-                                                        width="0.285" height="4.198" transform="translate(21.141)"
-                                                        fill="#484848">
-                                                    </rect>
-                                                </g>
-                                                <g id="grdfh" data-name="Group 4048" transform="translate(0 20.841)">
-                                                    <rect id="fhhfh" data-name="Rectangle 723" width="0.285"
-                                                        height="4.198" transform="translate(21.141 0.142)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectangjkhkfle_724" data-name="Rectangle 724" width="4.31"
-                                                        height="0.285" transform="translate(21.283)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectangkuule_725" data-name="Rectangle 725" width="4.31"
-                                                        height="0.285" fill="#484848"></rect>
-                                                    <rect id="Rectangle_726" data-name="Rectangle 726" width="0.285"
-                                                        height="4.197" transform="translate(4.167 0.142)"
-                                                        fill="#484848"></rect>
-                                                </g>
-                                            </g>
-                                            <g id="asggfgf" data-name="Group 4050"
-                                                transform="translate(-12737.236 203.764)">
-                                                <path id="gggtrrr" data-name="Path 10608"
-                                                    d="M3548.683,1598.838h-10.752a.605.605,0,0,1,0-1.211h10.752a.605.605,0,0,1,0,1.211Z"
-                                                    transform="translate(-3505.4 -1597.627)" fill="#484848"></path>
-                                                <path id="Path_10609" data-name="Path 10609"
-                                                    d="M3323.189,1598.838h-10.867a.605.605,0,0,1,0-1.211h10.867a.605.605,0,1,1,0,1.211Z"
-                                                    transform="translate(-3311.717 -1597.627)" fill="#484848"></path>
-                                            </g>
-                                            <g id="yhujjj" data-name="Group 4051"
-                                                transform="translate(-12715.897 182.425)">
-                                                <path id="Path_10610" data-name="Path 10610"
-                                                    d="M3463.116,1684.4a.605.605,0,0,1-.6-.605v-10.752a.6.6,0,1,1,1.21,0V1683.8A.605.605,0,0,1,3463.116,1684.4Z"
-                                                    transform="translate(-3462.511 -1640.515)" fill="#484848"></path>
-                                                <path id="Path_10611" data-name="Path 10611"
-                                                    d="M3463.116,1458.911a.605.605,0,0,1-.6-.606v-10.867a.6.6,0,1,1,1.21,0v10.867A.605.605,0,0,1,3463.116,1458.911Z"
-                                                    transform="translate(-3462.511 -1446.833)" fill="#484848"></path>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4 class="title"><a href="service.html">Gurkha Guards</a></h4>
-                                <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-single-item-list">
-                        <div class="service-single-item-2">
-                            <div class="thumb">
-                                <img src="./assets/img/section-img/service/main/service-03.png" alt="">
-                                <div class="animate-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.888" height="43.888"
-                                        viewBox="0 0 43.888 43.888">
-                                        <g id="rfgghh" data-name="Group 4112" transform="translate(12737.236 -182.425)">
-                                            <circle id="Ellipse_242" data-name="Ellipse 242" cx="2.481" cy="2.481"
-                                                r="2.481" transform="translate(-12717.772 202.054)" fill="#ba1111">
-                                            </circle>
-                                            <path id="sfgthh" data-name="Path 10606"
-                                                d="M3420.1,1564.089a7.7,7.7,0,1,1,7.7-7.7A7.705,7.705,0,0,1,3420.1,1564.089Zm0-15.108a7.412,7.412,0,1,0,7.412,7.411A7.42,7.42,0,0,0,3420.1,1548.981Z"
-                                                transform="translate(-16135.391 -1351.857)" fill="#ba1111"></path>
-                                            <path id="sgerty" data-name="Path 10607"
-                                                d="M3433.511,1575.29A5.485,5.485,0,1,1,3439,1569.8,5.492,5.492,0,0,1,3433.511,1575.29Zm0-10.686a5.2,5.2,0,1,0,5.2,5.2A5.207,5.207,0,0,0,3433.511,1564.6Z"
-                                                transform="translate(-16148.803 -1365.269)" fill="#ba1111"></path>
-                                            <g id="liujhjh" data-name="Group 4049"
-                                                transform="translate(-12728.114 191.994)">
-                                                <g id="drthh" data-name="Group 4047">
-                                                    <rect id="Rectadghdngle_719" data-name="Rectangle 719" width="0.285"
-                                                        height="4.198" transform="translate(4.167)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="afefra" data-name="Rectangle 720" width="4.31"
-                                                        height="0.285" transform="translate(0 4.055)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="rtghb" data-name="Rectangle 721" width="4.31"
-                                                        height="0.285" transform="translate(21.283 4.055)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectdjjjkijangle_722" data-name="Rectangle 722"
-                                                        width="0.285" height="4.198" transform="translate(21.141)"
-                                                        fill="#484848">
-                                                    </rect>
-                                                </g>
-                                                <g id="fttyrts" data-name="Group 4048" transform="translate(0 20.841)">
-                                                    <rect id="Rectsswqangle_723" data-name="Rectangle 723" width="0.285"
-                                                        height="4.198" transform="translate(21.141 0.142)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectavhhangle_724" data-name="Rectangle 724" width="4.31"
-                                                        height="0.285" transform="translate(21.283)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectartgrrggngle_725" data-name="Rectangle 725"
-                                                        width="4.31" height="0.285" fill="#484848"></rect>
-                                                    <rect id="Rectagpjhgfngle_726" data-name="Rectangle 726"
-                                                        width="0.285" height="4.197" transform="translate(4.167 0.142)"
-                                                        fill="#484848"></rect>
-                                                </g>
-                                            </g>
-                                            <g id="agglq" data-name="Group 4050"
-                                                transform="translate(-12737.236 203.764)">
-                                                <path id="Path_10608fdaav" data-name="Path 10608"
-                                                    d="M3548.683,1598.838h-10.752a.605.605,0,0,1,0-1.211h10.752a.605.605,0,0,1,0,1.211Z"
-                                                    transform="translate(-3505.4 -1597.627)" fill="#484848"></path>
-                                                <path id="Patavafah_10609" data-name="Path 10609"
-                                                    d="M3323.189,1598.838h-10.867a.605.605,0,0,1,0-1.211h10.867a.605.605,0,1,1,0,1.211Z"
-                                                    transform="translate(-3311.717 -1597.627)" fill="#484848"></path>
-                                            </g>
-                                            <g id="qqec" data-name="Group 4051"
-                                                transform="translate(-12715.897 182.425)">
-                                                <path id="Pathavvfdav_10610" data-name="Path 10610"
-                                                    d="M3463.116,1684.4a.605.605,0,0,1-.6-.605v-10.752a.6.6,0,1,1,1.21,0V1683.8A.605.605,0,0,1,3463.116,1684.4Z"
-                                                    transform="translate(-3462.511 -1640.515)" fill="#484848"></path>
-                                                <path id="Path_afaerea10611" data-name="Path 10611"
-                                                    d="M3463.116,1458.911a.605.605,0,0,1-.6-.606v-10.867a.6.6,0,1,1,1.21,0v10.867A.605.605,0,0,1,3463.116,1458.911Z"
-                                                    transform="translate(-3462.511 -1446.833)" fill="#484848"></path>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4 class="title"><a href="service.html">Female Guards</a></h4>
-                                <a class="read-btn" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-single-item-list">
-                        <div class="service-single-item-2">
-                            <div class="thumb">
-                                <img src="./assets/img/section-img/service/main/service-04.png" alt="">
-                                <div class="animate-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.888" height="43.888"
-                                        viewBox="0 0 43.888 43.888">
-                                        <g id="aaffrt" data-name="Group 4112" transform="translate(12737.236 -182.425)">
-                                            <circle id="dggih" data-name="Ellipse 242" cx="2.481" cy="2.481" r="2.481"
-                                                transform="translate(-12717.772 202.054)" fill="#ba1111">
-                                            </circle>
-                                            <path id="dsffd" data-name="Path 10606"
-                                                d="M3420.1,1564.089a7.7,7.7,0,1,1,7.7-7.7A7.705,7.705,0,0,1,3420.1,1564.089Zm0-15.108a7.412,7.412,0,1,0,7.412,7.411A7.42,7.42,0,0,0,3420.1,1548.981Z"
-                                                transform="translate(-16135.391 -1351.857)" fill="#ba1111"></path>
-                                            <path id="ergtgs" data-name="Path 10607"
-                                                d="M3433.511,1575.29A5.485,5.485,0,1,1,3439,1569.8,5.492,5.492,0,0,1,3433.511,1575.29Zm0-10.686a5.2,5.2,0,1,0,5.2,5.2A5.207,5.207,0,0,0,3433.511,1564.6Z"
-                                                transform="translate(-16148.803 -1365.269)" fill="#ba1111"></path>
-                                            <g id="dfaa" data-name="Group 4049"
-                                                transform="translate(-12728.114 191.994)">
-                                                <g id="agggf" data-name="Group 4047">
-                                                    <rect id="aggeer" data-name="Rectangle 719" width="0.285"
-                                                        height="4.198" transform="translate(4.167)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="dfafa" data-name="Rectangle 720" width="4.31"
-                                                        height="0.285" transform="translate(0 4.055)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectanadfagfhhjvgle_721" data-name="Rectangle 721"
-                                                        width="4.31" height="0.285" transform="translate(21.283 4.055)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectangleadjmn_722" data-name="Rectangle 722"
-                                                        width="0.285" height="4.198" transform="translate(21.141)"
-                                                        fill="#484848">
-                                                    </rect>
-                                                </g>
-                                                <g id="afgfg" data-name="Group 4048" transform="translate(0 20.841)">
-                                                    <rect id="Recafdafatangle_723" data-name="Rectangle 723"
-                                                        width="0.285" height="4.198" transform="translate(21.141 0.142)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectanlogle_724" data-name="Rectangle 724" width="4.31"
-                                                        height="0.285" transform="translate(21.283)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectfgdtrtrangle_725" data-name="Rectangle 725"
-                                                        width="4.31" height="0.285" fill="#484848"></rect>
-                                                    <rect id="Recfdtangle_726" data-name="Rectangle 726" width="0.285"
-                                                        height="4.197" transform="translate(4.167 0.142)"
-                                                        fill="#484848"></rect>
-                                                </g>
-                                            </g>
-                                            <g id="afdaafavyupkj" data-name="Group 4050"
-                                                transform="translate(-12737.236 203.764)">
-                                                <path id="Pathafa_adfa10608" data-name="Path 10608"
-                                                    d="M3548.683,1598.838h-10.752a.605.605,0,0,1,0-1.211h10.752a.605.605,0,0,1,0,1.211Z"
-                                                    transform="translate(-3505.4 -1597.627)" fill="#484848"></path>
-                                                <path id="Path_1vdfafaedfa0609" data-name="Path 10609"
-                                                    d="M3323.189,1598.838h-10.867a.605.605,0,0,1,0-1.211h10.867a.605.605,0,1,1,0,1.211Z"
-                                                    transform="translate(-3311.717 -1597.627)" fill="#484848"></path>
-                                            </g>
-                                            <g id="Group_4lafafafakjhgfd051" data-name="Group 4051"
-                                                transform="translate(-12715.897 182.425)">
-                                                <path id="Paafdafth_1da0610" data-name="Path 10610"
-                                                    d="M3463.116,1684.4a.605.605,0,0,1-.6-.605v-10.752a.6.6,0,1,1,1.21,0V1683.8A.605.605,0,0,1,3463.116,1684.4Z"
-                                                    transform="translate(-3462.511 -1640.515)" fill="#484848"></path>
-                                                <path id="Ppujhgath_1detrhs0611" data-name="Path 10611"
-                                                    d="M3463.116,1458.911a.605.605,0,0,1-.6-.606v-10.867a.6.6,0,1,1,1.21,0v10.867A.605.605,0,0,1,3463.116,1458.911Z"
-                                                    transform="translate(-3462.511 -1446.833)" fill="#484848"></path>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4 class="title"><a href="service.html"> Bodyguards </a></h4>
-                                <a class="read-btn" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </div>
@@ -1071,13 +847,19 @@
 
 
                     <div class="brand-active">
+
+                        @foreach ($clientData as $row)
+
+
                         <div class="brand-item-single">
                             <div class="brand-items">
-                                <img src="./assets/img/clients/avenue-k-logo.gif"
+                                <img src="{{ url('assets/images/client')}}/{{$row->id}}/{{$row->client_logo_image}}"
                                     alt="securiy gurds in K avenue malayasia">
                             </div>
                         </div>
+                        @endforeach
 
+                        <?php /*
                         <div class="brand-item-single">
                             <div class="brand-items">
                                 <img src="./assets/img/clients/bentley_music_academy_logo.gif"
@@ -1209,6 +991,7 @@
                                     alt="securiy gurds in hotel royal malayasia">
                             </div>
                         </div>
+                        */?>
                     </div>
                 </div>
             </div>

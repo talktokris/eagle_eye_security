@@ -74,10 +74,10 @@
 
                     <div class="col">
 						<div class="card">
-                            <h5 class="card-title" style="padding: 10px;">{{ $item->galley_title }}</h5>
+                            <h5 class="card-title" style="padding: 10px;">{{ $item->client_name }}</h5>
 							<img src="{{ url('assets/images/client')}}/{{ $item->id.'/'.$item->client_logo_image }}" class="card-img-top" alt="...">
 							<div class="card-body">
-								<p class="card-title">{{ $item->galley_category }}</p>
+								<p class="card-title">{{ $item->client_category }}</p>
 
 								<p class="card-text"></p>	<a href="<?php echo url('/admin/client/delete/').'/'. base64_encode($item->id) ;?>" class="btn btn-danger"><i class="bx bx-trash"></i></a>
 

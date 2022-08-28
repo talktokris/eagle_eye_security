@@ -229,7 +229,7 @@
                 <div class="google-map">
                     <div class="google-map contact-map">
                         <div class="mapbox"></div>
-                        <iframe class="w-100" height="445"
+                        <iframe class="w-100" height="550"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3983.663796984291!2d101.681941!3d3.182835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2985edc3b5df321!2sEagle%20Eye%20Security%20Sdn.%20Bhd.!5e0!3m2!1sen!2sus!4v1660835096751!5m2!1sen!2sus"></iframe>
 
                     </div>
@@ -240,30 +240,83 @@
                     <form action="#" method="post">
                         <div class="contact-info-inner">
                             <div class="row">
-                                <div class="col-md-6">
+
+
+								<div class="col-md-4 mb-3">
                                     <div class="single-input-inner style-border">
-                                        <input type="text" placeholder="Your Name*">
+											<label for="title" class="form-label">Title : </label>
+                                            <select name="title" class="form-control" id="title" style="height: 58px;" required="">
+                                                <?php if(old('title')){
+
+                                                    ?>
+                                                     <option value="<?php echo old('title') ?>"><?php echo  old('title') ?></option>
+                                                    <?php  }  ?>
+												<option value="Dr">Dr</option>
+                                                <option value="Mr">Mr</option>
+                                                <option value="Mrs">Mrs</option>
+                                                <option value="Miss">Miss</option>
+
+											</select>
+                                            @error('status')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                             @enderror
+                                            </div>
+								</div>
+
+                                <div class="col-md-8">
+                                    <div class="single-input-inner style-border">
+                                        <label for="validationCustom03" class="form-label"> Name :</label>
+                                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="validationCustom03" value="{{ old('name') }}" required="">
+
+                                        @error('name')
+                                        <div class="invalid-feedback">
+                                    {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
+
                                 <div class="col-md-6">
                                     <div class="single-input-inner style-border">
-                                        <input type="text" placeholder="Your email*">
+                                        <label for="validationCustom03" class="form-label"> Email :</label>
+                                        <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="validationCustom03" value="{{ old('email') }}" required="">
+
+                                        @error('email')
+                                        <div class="invalid-feedback">
+                                    {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
+
                                 <div class="col-md-6">
                                     <div class="single-input-inner style-border">
-                                        <input type="text" placeholder="Phone*">
+                                        <label for="validationCustom03" class="form-label"> Phone :</label>
+                                        <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror" id="validationCustom03" value="{{ old('phone') }}" required="">
+
+                                        @error('phone')
+                                        <div class="invalid-feedback">
+                                    {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="single-input-inner style-border">
-                                        <input type="text" placeholder="Subject">
-                                    </div>
-                                </div>
+
+
                                 <div class="col-12">
                                     <div class="single-input-inner style-border">
-                                        <textarea placeholder="Write messgae*" class=""></textarea>
-                                    </div>
+                                        <label for="validationCustom03" class="form-label"> Message :</label>
+
+                                        <textarea name="message"  placeholder="Write messgae*" class="form-control @error('message') is-invalid @enderror" required="" >{{ old('message') }}</textarea>
+
+                                        @error('message')
+                                        <div class="invalid-feedback">
+                                    {{ $message }}
+                                        </div>
+                                        @enderror
+                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="btn-wrap">

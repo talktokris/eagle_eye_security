@@ -58,13 +58,13 @@
                                 professional
                                 team </p>
                             <div class="btn-wrap">
-                                <button class="btn-panthar btn-border-base btn-style-white text-white w-100">
+                                <a href="{{ url("/apply-job")}}" class="btn-panthar btn-border-base btn-style-white text-white w-100" style="text-align: center;">
                                     <span class="top_left"></span>
                                     <span class="top_right"></span>
                                     <i class="fas fa-paper-plane"></i> Apply for job
                                     <span class="bottom_left"></span>
                                     <span class="bottom_right"></span>
-                                </button>
+                                </a>
 
 
                             </div>

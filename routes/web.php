@@ -29,11 +29,16 @@ Route::get('/management', [App\Http\Controllers\PagesController::class, 'managem
 Route::get('/trademark', [App\Http\Controllers\PagesController::class, 'trademark'])->name('trademark');
 Route::get('/our-customers', [App\Http\Controllers\PagesController::class, 'customers'])->name('our-customers');
 Route::get('/services', [App\Http\Controllers\PagesController::class, 'services'])->name('services');
+
+Route::get('/services/{link}', [App\Http\Controllers\PagesController::class, 'servicesLink'])->name('services');
+
+
 Route::get('/objectives', [App\Http\Controllers\PagesController::class, 'objectives'])->name('objectives');
 Route::get('/gallery', [App\Http\Controllers\PagesController::class, 'gallery'])->name('gallery');
 Route::get('/training', [App\Http\Controllers\PagesController::class, 'training'])->name('training');
 Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
-
+Route::match(array('GET','POST'),'/enquiry', [App\Http\Controllers\PagesController::class, 'enquiryStore'])->name('enquiry-store');
+Route::match(array('GET','POST'),'/apply-job', [App\Http\Controllers\PagesController::class, 'applyJobsPage'])->name('apply-job');
 
 
 
@@ -42,6 +47,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/dashboard', [App\Http\Controllers\DashboradController::class, 'index'])->name('admin-home');
     Route::get('/admin/enquiry', [App\Http\Controllers\AdminEnquiryController::class, 'enquiry'])->name('admin-enquiry');
     Route::get('/admin/job-application', [App\Http\Controllers\AdminEnquiryController::class, 'job'])->name('admin-jobs');
+    Route::get('/admin/job-apply/view/{hash_id}', [App\Http\Controllers\AdminEnquiryController::class, 'jobView'])->name('admin-jobs-view');
 
     Route::get('/admin/gallery/search', [App\Http\Controllers\AdminGalleryController::class, 'search'])->name('admin-gallery-search');
     Route::match(array('GET','POST'),'/admin/gallery/create', [App\Http\Controllers\AdminGalleryController::class, 'create'])->name('admin-gallery-create');

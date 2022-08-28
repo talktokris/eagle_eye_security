@@ -1,3 +1,27 @@
+<?php
+$CurrentRoute = Route::currentRouteName();
+// dd($CurrentRoute);
+
+
+if($CurrentRoute=="landing"){   $homePageActive='current-menu-item'; }else {$homePageActive='';}
+if(($CurrentRoute=="about-us")||($CurrentRoute=="new-gurads-arrival")||($CurrentRoute=="licenses-certificates")
+||($CurrentRoute=="management")||($CurrentRoute=="trademark")||($CurrentRoute=="apply-job")
+||($CurrentRoute=="news")){   $aboutPageActive='current-menu-item'; }else {$aboutPageActive='';}
+
+if(($CurrentRoute=="about-us")||($CurrentRoute=="new-gurads-arrival")||($CurrentRoute=="licenses-certificates")
+||($CurrentRoute=="management")||($CurrentRoute=="trademark")||($CurrentRoute=="apply-job")
+||($CurrentRoute=="news")){   $aboutPageActive='current-menu-item'; }else {$aboutPageActive='';}
+
+if($CurrentRoute=="services"){   $servicesPageActive='current-menu-item'; }else {$servicesPageActive='';}
+if($CurrentRoute=="objectives"){   $objectivesPageActive='current-menu-item'; }else {$objectivesPageActive='';}
+if($CurrentRoute=="gallery"){   $galleryPageActive='current-menu-item'; }else {$galleryPageActive='';}
+if($CurrentRoute=="training"){   $trainingPageActive='current-menu-item'; }else {$trainingPageActive='';}
+if(($CurrentRoute=="contact")||($CurrentRoute=="enquiry-store")){   $contactPageActive='current-menu-item'; }else {$contactPageActive='';}
+
+
+
+      ?>
+
 <nav class="navbar navbar-area navbar-expand-lg navigation-style-01 menu-02 navigation-before">
     <div class="container custom-container">
         <div class="responsive-menu">
@@ -16,8 +40,8 @@
         <div class="collapse navbar-collapse" id="themebuzs_main_menu">
             <ul class="navbar-nav">
 
-                <li><a href="{{ url("/") }}"><span>HOME</span> </a></li>
-                <li class="menu-item-has-children current-menu-item">
+                <li><a href="{{ url("/") }}"  class="<?php echo $homePageActive;?>"><span>HOME</span> </a></li>
+                <li class="menu-item-has-children <?php echo $aboutPageActive;?>">
                     <a href="#">About</a>
                     <ul class="sub-menu">
                         <li><a href="{{ url("/about-us") }}"><span>About Eage Eye Security</span></a></li>
@@ -28,18 +52,29 @@
                         <li><a href="{{ url("/management") }}"><span>Management</span></a></li>
                         <li><a href="{{ url("/trademark") }}"><span>Trademark</span> </a></li>
                         <li><a href="{{ url("/our-customers") }}"><span>Our Customers</span> </a></li>
+                        <li><a href="{{ url("/apply-job") }}"><span>Apply for Jobs</span> </a></li>
+
                     </ul>
                 </li>
 
 
 
-                <li><a href="{{ url("/services") }}"><span>Services</span> </a></li>
-                <li><a href="{{ url("/objectives") }}"><span>Objectives</span> </a></li>
-                <li><a href="{{ url("/gallery") }}"><span>Gallery</span> </a></li>
+                <li><a href="{{ url("/services") }}" class="<?php echo $servicesPageActive;?>"><span>Services</span> </a></li>
+                <li><a href="{{ url("/objectives") }}" class="<?php echo $objectivesPageActive;?>"><span>Objectives</span> </a></li>
+                <li><a href="{{ url("/gallery") }}" class="<?php echo $galleryPageActive;?>"><span>Gallery</span> </a></li>
 
-                <li><a href="{{ url("/training") }}"><span>Training</span> </a></li>
+                <li><a href="{{ url("/training") }}" class="<?php echo $trainingPageActive;?>"><span>Training</span> </a></li>
                 <li><a href="http://www.eagleeyecctv.com.my/" target="_blank"><span>System</span> </a></li>
-                <li><a href="{{ url("/contact") }}"><span>CONTACT</span> </a></li>
+
+                <li class="menu-item-has-children <?php echo $contactPageActive;?>">
+                    <a href="{{ url("/contact") }}">CONTACT</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ url("/contact") }}"><span>Contact Information</span> </a></li>
+                        <li><a href="{{ url("/enquiry") }}"><span>Online Enquiry</span> </a></li>
+
+                    </ul>
+                </li>
+
 
             </ul>
         </div>

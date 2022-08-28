@@ -32,7 +32,7 @@ class AdminClientsController extends Controller
         if ('POST' === $request->getMethod()){
 
             $validatedData= $request->validate([
-                'image_name'=>'required|mimes:png,jpg,jpeg|max:8048',
+                'image_name'=>'required|mimes:png,jpg,gif,jpeg|max:8048',
                 'client_name' => 'required|string|min:5|max:50',
                 'client_category' => 'required|string|min:2|max:50',
 

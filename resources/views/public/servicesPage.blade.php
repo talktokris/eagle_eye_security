@@ -46,180 +46,25 @@
 
             <div class="service-wrapper">
                 <div class="row">
+                    @foreach ($pageData as $item)
+
+
                     <div class="col-md-6 col-lg-3">
                         <div class="service-single-item-list">
                             <div class="service-single-item">
                                 <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main-service-01.png" alt="">
+                                    <img src="{{ url('assets/images/services/')}}/{{ $item->id}}/{{ $item->image_mid}}" alt="{{ $item->title}}">
                                 </div>
                                 <div class="details">
-                                    <h4 class="title"><a href="service-single.html">Body Guards</a></h4>
-                                    <a class="read-btn" href="service-single.html"><i
-                                            class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-02.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="service-single.html">Gurkha Security Guards</a></h4>
-                                    <a class="read-btn" href="service-single.html"><i
-                                            class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-03.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="service-single.html">Premium Local Guards
-                                        </a></h4>
-                                    <a class="read-btn" href="service-single.html"><i
-                                            class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-04.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="service-single.html">Female Security Guards </a></h4>
-                                    <a class="read-btn" href="service-single.html"><i
-                                            class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-05.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="service-single.html">Guard Dog with Handlers </a>
-                                    </h4>
-                                    <a class="read-btn" href="service-single.html"><i
+                                    <h4 class="title"><a href="{{ url('/services')}}/{{ $item->link}}">{{ $item->title_short}}</a></h4>
+                                    <a class="read-btn" href="{{ url('/services')}}/{{ $item->link}}"><i
                                             class="fa fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-06.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="#"> Smart CCTV / CMS </a></h4>
-                                    <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-06.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="#"> Patrolling Unit </a></h4>
-                                    <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-06.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="#"> Car Park Barrier </a></h4>
-                                    <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-06.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="#"> Card Access Systems </a></h4>
-                                    <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-06.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="#"> Infrared System </a></h4>
-                                    <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-06.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="#"> Burglar Alarm System </a></h4>
-                                    <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="service-single-item-list">
-                            <div class="service-single-item">
-                                <div class="thumb">
-                                    <img src="./assets/img/section-img/service/main/service-06.png" alt="">
-                                </div>
-                                <div class="details">
-                                    <h4 class="title"><a href="#"> Security Consultancy</a></h4>
-                                    <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
 
                 </div>

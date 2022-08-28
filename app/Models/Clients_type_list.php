@@ -14,4 +14,12 @@ class Clients_type_list extends Model
         'full_name',
         'status'
     ];
+
+
+
+    public function getAllClients(){
+
+        return $this->hasMany(Clients_list::class, 'client_category', 'name_short');
+
+    }
 }

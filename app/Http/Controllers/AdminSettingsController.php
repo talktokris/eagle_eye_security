@@ -42,6 +42,10 @@ class AdminSettingsController extends Controller
 
             $name_short =str_replace(" ","-",$data['full_name']);
             $name_short =str_replace("&","n",$name_short);
+            $name_short =str_replace("---","-",$name_short);
+            $name_short =str_replace("--","-",$name_short);
+            $name_short =strtolower($name_short);
+
          //  dd($name_short);
             $data= $request->all();
             $newsSave = new Gallery_type_list;
@@ -51,8 +55,8 @@ class AdminSettingsController extends Controller
             $newsSave->save();
 
 
-            if(!$newsSave){      return redirect('admin/gallery/category/create')->with('flash_message_error', 'Internal error. Please email to support@ealgeeyesecurity.com.my'); }
-            else {   return redirect('admin/gallery/category/create')->with('flash_message_success', 'Gallery category created successfully');}
+            if(!$newsSave){      return redirect('/admin/setting/gallery-category')->with('flash_message_error', 'Internal error. Please email to support@ealgeeyesecurity.com.my'); }
+            else {   return redirect('/admin/setting/gallery-category')->with('flash_message_success', 'Gallery category created successfully');}
 
         }
 
@@ -117,17 +121,21 @@ class AdminSettingsController extends Controller
 
             $name_short =str_replace(" ","-",$data['full_name']);
             $name_short =str_replace("&","n",$name_short);
+            $name_short =str_replace("---","-",$name_short);
+            $name_short =str_replace("--","-",$name_short);
+            $name_short =strtolower($name_short);
          //  dd($name_short);
             $data= $request->all();
             $newsSave = new Clients_type_list;
             $newsSave->name_short= $name_short;
             $newsSave->full_name= $data['full_name'];
             $newsSave->status= $data['status'];
+
             $newsSave->save();
 
 
-            if(!$newsSave){      return redirect('admin/gallery/category/create')->with('flash_message_error', 'Internal error. Please email to support@ealgeeyesecurity.com.my'); }
-            else {   return redirect('admin/gallery/category/create')->with('flash_message_success', 'Gallery category created successfully');}
+            if(!$newsSave){      return redirect('admin/setting/client-category')->with('flash_message_error', 'Internal error. Please email to support@ealgeeyesecurity.com.my'); }
+            else {   return redirect('admin/setting/client-category')->with('flash_message_success', 'Gallery category created successfully');}
 
         }
 
