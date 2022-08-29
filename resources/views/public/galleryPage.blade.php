@@ -28,24 +28,39 @@
                 <div class="gallery-menu filter-button-group">
                     <ul>
                         <li class="active" data-filter="*">
+                            <a href="{{ url('/gallery')}}">
                             <span class="tag-wrap">
                                 <span class="tag">
                                     <span class="style-animate-dot-wrap">
                                         <span class="style-animate-dot"></span>
                                     </span>
-                                    All </span>
+                                    Latest </span>
                             </span>
+                        </a>
                         </li>
-                        <li data-filter=".corporate" class="">
-                            <span class="tag-wrap">
-                                <span class="tag">
-                                    <span class="style-animate-dot-wrap">
-                                        <span class="style-animate-dot"></span>
+
+                        @foreach ($GalCatData as $itemGalCat)
+
+                        <li  >
+                            <a href="{{ url('/gallery')}}/{{$itemGalCat->name_short}}">
+
+                                <span class="tag-wrap">
+                                    <span class="tag">
+                                        <span class="style-animate-dot-wrap">
+                                            <span class="style-animate-dot"></span>
+                                        </span>
+                                        {{ $itemGalCat->full_name }}
                                     </span>
-                                    Corporate
                                 </span>
-                            </span>
+                            </a>
+
                         </li>
+
+                        @endforeach
+
+
+                        <?php /*
+
                         <li data-filter=".office" class="">
                             <span class="tag-wrap">
                                 <span class="tag">
@@ -86,76 +101,32 @@
                                 </span>
                             </span>
                         </li>
+
+                        */ ?>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <div class="gallery-item-wrap">
-        <div class="item gallery-single-item-1 bodyguard event">
-            <div class="thumb" style="background-image: url('./assets/img/section-img/gallary/gallary-01.png');">
+
+        <?php $numGal=1; ?>
+
+        @foreach ($GalData as $galRow)
+
+
+        <div class="item gallery-single-item-<?php echo $numGal ;?> event">
+            <div class="thumb" style="background-image: url('{{ url('/assets/images/gallery')}}/{{ $galRow->id}}/{{$galRow->image_small}}');">
             </div>
             <a class="popup-btn image-popup-vertical-fit"
-                href="https://themebuzs.com/wp/panthar/wp-content/uploads/2022/01/high-angle-safety-team-work.png">
+                href="{{ url('/assets/images/gallery')}}/{{ $galRow->id}}/{{$galRow->image_large}}">
                 <i class="icomoon-plus-sign"></i>
             </a>
         </div>
-        <div class="item gallery-single-item-2 bodyguard event">
-            <div class="thumb" style="background-image: url('./assets/img/section-img/gallary/gallary-02.png');">
-            </div>
-            <a class="popup-btn image-popup-vertical-fit"
-                href="https://themebuzs.com/wp/panthar/wp-content/uploads/2022/01/side-view-security-guards-specialist.png">
-                <i class="icomoon-plus-sign"></i>
-            </a>
-        </div>
-        <div class="item gallery-single-item-3 bank corporate">
-            <div class="thumb" style="background-image: url('./assets/img/section-img/gallary/gallary-03.png');">
-            </div>
-            <a class="popup-btn image-popup-vertical-fit"
-                href="https://themebuzs.com/wp/panthar/wp-content/uploads/2022/01/police-officer-making-stop-gesture.png">
-                <i class="icomoon-plus-sign"></i>
-            </a>
-        </div>
-        <div class="item gallery-single-item-4 bodyguard corporate">
-            <div class="thumb" style="background-image: url('./assets/img/section-img/gallary/gallary-04.png');">
-            </div>
-            <a class="popup-btn image-popup-vertical-fit"
-                href="https://themebuzs.com/wp/panthar/wp-content/uploads/2022/01/security-woman-stopping-photographers-1.png">
-                <i class="icomoon-plus-sign"></i>
-            </a>
-        </div>
-        <div class="item gallery-single-item-5 bank office">
-            <div class="thumb" style="background-image: url('./assets/img/section-img/gallary/gallary-05.png');">
-            </div>
-            <a class="popup-btn image-popup-vertical-fit"
-                href="https://themebuzs.com/wp/panthar/wp-content/uploads/2022/01/cops-black-uniform-body-armor.png">
-                <i class="icomoon-plus-sign"></i>
-            </a>
-        </div>
-        <div class="item gallery-single-item-6 bodyguard event office">
-            <div class="thumb" style="background-image: url('./assets/img/section-img/gallary/gallary-06.png');">
-            </div>
-            <a class="popup-btn image-popup-vertical-fit"
-                href="https://themebuzs.com/wp/panthar/wp-content/uploads/2022/01/serious-female-police-officer-is-posing-camera-against-black-background-with-red-blue.png">
-                <i class="icomoon-plus-sign"></i>
-            </a>
-        </div>
-        <div class="item gallery-single-item-7 bodyguard corporate office">
-            <div class="thumb" style="background-image: url('./assets/img/section-img/gallary/gallary-07.png');">
-            </div>
-            <a class="popup-btn image-popup-vertical-fit"
-                href="https://themebuzs.com/wp/panthar/wp-content/uploads/2022/01/two-male-police-officers-uniform-sunglasses-standing-back-back-policemen-protect-law-cops-work-city-street-order-justice-control.png">
-                <i class="icomoon-plus-sign"></i>
-            </a>
-        </div>
-        <div class="item gallery-single-item-8 bank bodyguard event">
-            <div class="thumb" style="background-image: url('./assets/img/section-img/gallary/gallary-08.png');">
-            </div>
-            <a class="popup-btn image-popup-vertical-fit"
-                href="https://themebuzs.com/wp/panthar/wp-content/uploads/2022/01/elegant-woman-medical-face-mask-passing-through-metal-detector-scanner-airport-terminal.png">
-                <i class="icomoon-plus-sign"></i>
-            </a>
-        </div>
+
+        <?php $numGal++ ; ?>
+        @endforeach
+
     </div>
 </div>
 

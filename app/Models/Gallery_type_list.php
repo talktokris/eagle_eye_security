@@ -15,4 +15,7 @@ class Gallery_type_list extends Model
         'status'
     ];
 
+
+
+
 }

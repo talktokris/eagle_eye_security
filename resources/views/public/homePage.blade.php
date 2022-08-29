@@ -177,6 +177,8 @@
                     </div>
 
                     @endforeach
+
+                    <?php /*
                     <div class="team-items-single">
                         <div class="single-team-inner style-overlay">
                             <div class="thumb">
@@ -272,6 +274,8 @@
                             </div>
                         </div>
                     </div>
+
+                     */ ?>
                 </div>
             </div>
         </div>

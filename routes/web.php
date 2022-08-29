@@ -31,6 +31,8 @@ Route::get('/our-customers', [App\Http\Controllers\PagesController::class, 'cust
 Route::get('/services', [App\Http\Controllers\PagesController::class, 'services'])->name('services');
 
 Route::get('/services/{link}', [App\Http\Controllers\PagesController::class, 'servicesLink'])->name('services');
+Route::get('/news/view/{hash_id}', [App\Http\Controllers\PagesController::class, 'newsView'])->name('news-view');
+Route::get('/gallery/{gal_cat}', [App\Http\Controllers\PagesController::class, 'galleryView'])->name('gallery');
 
 
 Route::get('/objectives', [App\Http\Controllers\PagesController::class, 'objectives'])->name('objectives');

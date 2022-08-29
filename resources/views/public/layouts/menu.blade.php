@@ -6,11 +6,8 @@ $CurrentRoute = Route::currentRouteName();
 if($CurrentRoute=="landing"){   $homePageActive='current-menu-item'; }else {$homePageActive='';}
 if(($CurrentRoute=="about-us")||($CurrentRoute=="new-gurads-arrival")||($CurrentRoute=="licenses-certificates")
 ||($CurrentRoute=="management")||($CurrentRoute=="trademark")||($CurrentRoute=="apply-job")
-||($CurrentRoute=="news")){   $aboutPageActive='current-menu-item'; }else {$aboutPageActive='';}
+||($CurrentRoute=="news")||($CurrentRoute=="news-view")||($CurrentRoute=="our-customers")){   $aboutPageActive='current-menu-item'; }else {$aboutPageActive='';}
 
-if(($CurrentRoute=="about-us")||($CurrentRoute=="new-gurads-arrival")||($CurrentRoute=="licenses-certificates")
-||($CurrentRoute=="management")||($CurrentRoute=="trademark")||($CurrentRoute=="apply-job")
-||($CurrentRoute=="news")){   $aboutPageActive='current-menu-item'; }else {$aboutPageActive='';}
 
 if($CurrentRoute=="services"){   $servicesPageActive='current-menu-item'; }else {$servicesPageActive='';}
 if($CurrentRoute=="objectives"){   $objectivesPageActive='current-menu-item'; }else {$objectivesPageActive='';}

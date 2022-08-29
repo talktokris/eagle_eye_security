@@ -13,6 +13,9 @@ use App\Models\Country_list;
 use App\Models\Service_list;
 use App\Models\Clients_list;
 use App\Models\Clients_type_list;
+use App\Models\News_notice_list;
+use App\Models\Gallery_list;
+use App\Models\Gallery_type_list;
 
 use Intervention\Image\Facades\Image;
 
@@ -22,57 +25,77 @@ class PagesController extends Controller
 
     public function index(){
 
-        $pageData = Service_list::where('status','=',1)->get();
-        $clientData = Clients_list::where('status','=',1)->get();
+        $pageData = Service_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+        $clientData = Clients_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
 
-        return view("public.homePage")->with(compact("pageData"))->with(compact("clientData"));
+
+        return view("public.homePage")->with(compact("pageData"))->with(compact("clientData"))->with(compact("newsData"));
 
 
     }
 
     public function aboutUs(){
 
-        return view("public.aboutPage");
+
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.aboutPage")->with(compact("newsData"));
+
+
 
     }
 
     public function newArrival(){
 
-        return view("public.arrivalPage");
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.arrivalPage")->with(compact("newsData"));
 
     }
 
     public function licenses(){
 
-        return view("public.licensesPage");
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.licensesPage")->with(compact("newsData"));
+
 
     }
 
     public function management(){
 
-        return view("public.managementPage");
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.managementPage")->with(compact("newsData"));
+
 
     }
 
     public function trademark(){
 
-        return view("public.trademarkPage");
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.trademarkPage")->with(compact("newsData"));
+
 
     }
 
     public function customers(){
 
-        $pageData = Clients_type_list::where('status','=',1)->with('getAllClients')->get();
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        $pageData = Clients_type_list::where('status','=',1)->with('getAllClients')->orderBy('id', 'DESC')->get();
 
        // print_r($pageData);
 
-        return view("public.customersPage")->with(compact("pageData"));
+        return view("public.customersPage")->with(compact("pageData"))->with(compact("newsData"));;
 
     }
 
     public function services(){
 
-        $pageData = Service_list::where('status','=',1)->get();
+        $pageData = Service_list::where('status','=',1)->orderBy('id', 'DESC')->get();
 
         return view("public.servicesPage")->with(compact("pageData"));
 
@@ -81,31 +104,66 @@ class PagesController extends Controller
 
     public function objectives(){
 
-        return view("public.objectivesPage");
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.objectivesPage")->with(compact("newsData"));
+
 
     }
 
     public function gallery(){
 
-        return view("public.galleryPage");
+
+        $GalData = Gallery_list::where('status','=',1)->orderBy('id', 'DESC')->limit(20)->get();
+        $GalCatData = Gallery_type_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.galleryPage")->with(compact("newsData"))->with(compact("GalData"))->with(compact("GalCatData"));
+
+
+    }
+
+    public function galleryView($gal_cat=null){
+
+
+        $GalData = Gallery_list::where([['status','=',1],['galley_category','=',$gal_cat]])->orderBy('id', 'DESC')->get();
+        $GalCatData = Gallery_type_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.galleryPage")->with(compact("newsData"))->with(compact("GalData"))->with(compact("GalCatData"));
+
 
     }
 
     public function training(){
 
-        return view("public.trainingPage");
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.trainingPage")->with(compact("newsData"));
+
 
     }
 
     public function contact(){
 
-        return view("public.contactPage");
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        return view("public.contactPage")->with(compact("newsData"));
+
 
     }
 
 
 
     public function enquiryStore(Request $request){
+
+        $pageData = Service_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
 
 
         if($request->isMethod('post')){
@@ -137,14 +195,17 @@ class PagesController extends Controller
 
         }
 
-        return view("public.enquiryPage");
+        return view("public.enquiryPage")->with(compact("pageData"))->with(compact("newsData"));;
 
 
     }
 
     public function applyJobsPage(Request $request){
 
-        $countryData= Country_list::where('status','=',1)->get();
+        $countryData= Country_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
 
 
         if($request->isMethod('post')){
@@ -191,7 +252,7 @@ class PagesController extends Controller
 
         }
 
-        return view("public.applyJobsPage")->with(compact("countryData"));
+        return view("public.applyJobsPage")->with(compact("countryData"))->with(compact("newsData"));;
 
 
     }
@@ -201,15 +262,37 @@ class PagesController extends Controller
 
        // dd($link);
 
+       $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
        if($link !=''){
 
-            $pageData = Service_list::where('link','=',$link)->get();
+            $pageData = Service_list::where('link','=',$link)->orderBy('id', 'DESC')->get();
 
-            return view("public.servicesInfoPage")->with(compact("pageData"));
+            return view("public.servicesInfoPage")->with(compact("pageData"))->with(compact("newsData"));
 
         } else { echo "Page Not Found";}
 
     }
+
+
+
+    public function newsView($hash_id=null){
+
+        // dd($link);
+
+        $id= base64_decode($hash_id);
+
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+        if($hash_id !=''){
+
+             $pageData = News_notice_list::where('id','=',$id)->orderBy('id', 'DESC')->get();
+
+             return view("public.newsViewPage")->with(compact("pageData"))->with(compact("newsData"));
+
+         } else { echo "Page Not Found";}
+
+     }
 
 
 

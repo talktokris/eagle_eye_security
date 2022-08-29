@@ -15420,3 +15420,9 @@ ul.blocks-gallery-grid li:before {
  .current-menu-item:hover {
     color: #000000 !important;
  }
+ .single-team-inner .thumb {
+
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 2px solid #fff;
+  }

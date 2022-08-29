@@ -32,7 +32,7 @@
                     <div class="content">
 
                         <div class="thumb">
-                            <img src="{{ url('/assets/img/section-img/service')}}/{{ $item->image_mid}}" alt="{{ $item->title }}">
+                            <img src="{{ url('/assets/images/services')}}/{{ $item->id}}/{{ $item->image_large}}" alt="{{ $item->title }}">
                         </div>
                         <h2 class="title">{{ $item->title }}</h2>
                         <?php
