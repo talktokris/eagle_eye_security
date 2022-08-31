@@ -1,13 +1,11 @@
 
    @extends('public.layouts.masterPage')
 
-   @section('title','One Stop Security Solutions Consultation, Security guard company in Malaysia, best security guard company in
-   kl, No.# security guard company in kl, best security guard company in Penang, No.1# security guard company in
-   Penang Best security guard company in malaysia - Security Company in Malaysia | Security Guards Malaysia | Security Guards | Local Guards Malaysia | Local Guards')
+   @section('title','One Stop Security Solutions Consultation, Malaysia&#39;s No 1 security services company, Malaysia�s No.#1 Security Company Eagle Eye, Security guard company in malaysia, best security guard company in kl, No.# security guard company in kl')
 
-   @section('keywords','Malaysia Security Guard Company,security service,security service company Malaysia, Security Malaysia, security service company in Malaysia,&lt;br /&gt;security service company in kl,&lt;br /&gt;security service company kl')
+   @section('keywords','Malaysia Security Guard Company,&lt;br /&gt;&lt;br /&gt;security service,&lt;br /&gt;security service company Malaysia,&lt;br /&gt;Security Malaysia,&lt;br /&gt;security service company in Malaysia,&lt;br /&gt;security service company in kl,&lt;br /&gt;security service company kl,&lt;br /&gt;security guard service company kl,&lt;br /&gt;security guard service company in kl,&lt;br /&gt;security guard service company in Kuala Lumpur,&lt;br /&gt;security guard service company kuala lumpur,&lt;br /&gt;security guard company in Malaysia,&lt;br /&gt;security guard company Malaysia,&lt;br /&gt;security company in Malaysia,&lt;br /&gt;security company Malaysia,&lt;br /&gt;security services Malaysia')
 
-   @section('description','Eagle Eye Security Sdn Bhd is a principal company (Not franchise). Eagle Eye Security is a leading security services provider company in malaysia. Established 2002, The Security Guard Services in our company are one of the highest quality security services in Malaysia with good pricing available in the market. We are specialized in High End Condominium and Commercial Building for the provision as Private Agency in Malaysia ,Eagle Eye Security provides security, monitoring, consulting and investigative services. Our security solutions are tailored to your business needs')
+   @section('description','Eagle Eye Security Sdn Bhd is a principal company (Not franchise). Eagle Eye Security is a leading security services provider company in malaysia. Established 2002, The Security Guard Services in our company are one of the highest quality security services in Malaysia with good pricing available in the marketn.')
 
    @section('contents')
 

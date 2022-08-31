@@ -24,118 +24,7 @@
             </div>
             <h2 class="site-text">Eagle Eye</h2>
             <div class="baner-wrapper">
-                <?php /*
-                <div class="baner-items">
-                    <div class="row align-items-center flex-reverse">
-                        <div class="col-lg-7">
-                            <div class="baner-content">
-                                <h2 class="baner-title">Eagle Eye Security</h2>
-                                <h4 class="baner-subtitle">Fast Efficient Reliable</h4>
-                                <p>American Panthar Security is looking to expand our private security company in
-                                    Colorado. This means we need qualified professionals to join our team. We are
-                                    looking for former police officers and ex-military members.</p>
-                                <div class="btn-wrap d-inline-block">
-                                    <a class="btn btn-border-base" href="contact.html">
-                                        <span class="top_left"></span>
-                                        <span class="top_right"></span>
-                                        <span>
-                                            CONTACT US </span>
-                                        <span class="bottom_left"></span>
-                                        <span class="bottom_right"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="baner-img">
-                                <img src="./assets/img/section-img/baner/banar-img-01.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="baner-items">
-                    <div class="row align-items-center flex-reverse">
-                        <div class="col-lg-7">
-                            <div class="baner-content">
-                                <h2 class="baner-title">Industrial Security</h2>
-                                <h4 class="baner-subtitle">Fast Efficient Reliable</h4>
-                                <p>Our provides trained and experienced security guards for industrial sectors. Please send enquired.</p>
-                                <div class="btn-wrap d-inline-block">
-                                    <a class="btn btn-border-base" href="{{url('/contact')}}">
-                                        <span class="top_left"></span>
-                                        <span class="top_right"></span>
-                                        <span>
-                                            GET A QUOTE </span>
-                                        <span class="bottom_left"></span>
-                                        <span class="bottom_right"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="baner-img">
-                                <img src="./assets/img/section-img/baner/Artboard-–-1.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="baner-items">
-                    <div class="row align-items-center flex-reverse">
-                        <div class="col-lg-7">
-                            <div class="baner-content">
-                                <h2 class="baner-title">Industrial Security</h2>
-                                <h4 class="baner-subtitle">Fast Efficient Reliable</h4>
-                                <p>Our provides trained and experienced security guards for industrial sectors. Please send enquired.</p>
-                                <div class="btn-wrap d-inline-block">
-                                    <a class="btn btn-border-base" href="{{url('/contact')}}">
-                                        <span class="top_left"></span>
-                                        <span class="top_right"></span>
-                                        <span>
-                                            GET A QUOTE </span>
-                                        <span class="bottom_left"></span>
-                                        <span class="bottom_right"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="baner-img">
-                                <img src="./assets/img/section-img/baner/banar-img-01.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="baner-items">
-                    <div class="row align-items-center flex-reverse">
-                        <div class="col-lg-7">
-                            <div class="baner-content">
-                                <h2 class="baner-title">Bank Security</h2>
-                                <h4 class="baner-subtitle">For Your Personal Safety</h4>
-                                <p>American Panthar Security is looking to expand our private security company in
-                                    Colorado. This
-                                    means we need qualified professionals to join our team. We are looking
-                                    for former police officers and ex-military members.</p>
-                                <div class="btn-wrap d-inline-block">
-                                    <a class="btn btn-border-base" href="#">
-                                        <span class="top_left"></span>
-                                        <span class="top_right"></span>
-                                        <span>
-                                            CONTACT US </span>
-                                        <span class="bottom_left"></span>
-                                        <span class="bottom_right"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="baner-img">
-                                <img src="./assets/img/section-img/baner/Artboard-–-1.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                */ ?>
                 <div class="baner-items">
                     <div class="row align-items-center flex-reverse">
                         <div class="col-lg-7">
@@ -358,104 +247,7 @@
 
                     @endforeach
 
-                    <?php /*
-                    <div class="team-items-single">
-                        <div class="single-team-inner style-overlay">
-                            <div class="thumb">
-                                <img src="{{ url('assets/images/services')}}/{{ $item->id }}/{{ $item->image_slider}}" alt="">
-                                <span class="animate-1"></span>
-                                <span class="animate-2"></span>
-                                <span class="animate-3"></span>
-                                <span class="animate-4"></span>
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <a href="team-details.html">
-                                        <h4 class="title">KAPPA DURO</h4>
-                                    </a>
-                                    <p>SPECIAL FORCE</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-items-single">
-                        <div class="single-team-inner style-overlay">
-                            <div class="thumb">
-                                <img src="./assets/img/section-img/team/team-image-03.png" alt="">
-                                <span class="animate-1"></span>
-                                <span class="animate-2"></span>
-                                <span class="animate-3"></span>
-                                <span class="animate-4"></span>
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <a href="team-details.html">
-                                        <h4 class="title">NIKE PANDA</h4>
-                                    </a>
-                                    <p>SPECIAL FORCE</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-items-single">
-                        <div class="single-team-inner style-overlay">
-                            <div class="thumb">
-                                <img src="./assets/img/section-img/team/team-image-04.png" alt="">
-                                <span class="animate-1"></span>
-                                <span class="animate-2"></span>
-                                <span class="animate-3"></span>
-                                <span class="animate-4"></span>
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <a href="team-details.html">
-                                        <h4 class="title">HURRISH AND</h4>
-                                    </a>
-                                    <p>SPECIAL FORCE</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-items-single">
-                        <div class="single-team-inner style-overlay">
-                            <div class="thumb">
-                                <img src="./assets/img/section-img/team/team-image-05.png" alt="">
-                                <span class="animate-1"></span>
-                                <span class="animate-2"></span>
-                                <span class="animate-3"></span>
-                                <span class="animate-4"></span>
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <a href="team-details.html">
-                                        <h4 class="title">DIMU PAKAL</h4>
-                                    </a>
-                                    <p>SPECIAL FORCE</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-items-single">
-                        <div class="single-team-inner style-overlay">
-                            <div class="thumb">
-                                <img src="./assets/img/section-img/team/team-image-06.png" alt="">
-                                <span class="animate-1"></span>
-                                <span class="animate-2"></span>
-                                <span class="animate-3"></span>
-                                <span class="animate-4"></span>
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <a href="team-details.html">
-                                        <h4 class="title">JHON HARISON</h4>
-                                    </a>
-                                    <p>SPECIAL FORCE</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                     */ ?>
                 </div>
             </div>
         </div>
@@ -812,7 +604,7 @@
                                 <div class="media-left icon-wrap ">
                                     <div class="icon-wrap-inner">
                                         <div class="icon">
-                                            <i aria-hidden="true" class="icomoon icomoon-trophy"></i>
+                                            <i aria-hidden="true" class="icomoon icomoon-dimond"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -834,7 +626,7 @@
                                 <div class="media-left icon-wrap ">
                                     <div class="icon-wrap-inner">
                                         <div class="icon">
-                                            <i aria-hidden="true" class="icomoon icomoon-award-1"></i>
+                                            <i aria-hidden="true" class="icomoon icomoon-dimond"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -859,7 +651,7 @@
                                 <div class="media-left icon-wrap ">
                                     <div class="icon-wrap-inner">
                                         <div class="icon">
-                                            <i aria-hidden="true" class="icomoon icomoon-flag"></i>
+                                            <i aria-hidden="true" class="icomoon icomoon-dimond"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -883,7 +675,7 @@
                                 <div class="media-left icon-wrap ">
                                     <div class="icon-wrap-inner">
                                         <div class="icon">
-                                            <i aria-hidden="true" class="icomoon icomoon-award-4"></i>
+                                            <i aria-hidden="true" class="icomoon icomoon-dimond"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -1043,139 +835,7 @@
                         </div>
                         @endforeach
 
-                        <?php /*
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/bentley_music_academy_logo.gif"
-                                    alt="securiy gurds in K bentley music academy malayasia">
-                            </div>
-                        </div>
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/i-zen@kiarai_logo.gif"
-                                    alt="securiy gurds in i-zen kiarai malayasia">
-                            </div>
-                        </div>
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/kiaramas-logo.gif"
-                                    alt="securiy gurds in K kiaramas malayasia">
-                            </div>
-                        </div>
 
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/mix-client-35-logo_24.gif"
-                                    alt="securiy gurds in embassy malayasia">
-                            </div>
-                        </div>
-
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/mix-client-35-logo_28.gif"
-                                    alt="securiy gurds in embassy malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/montkira_international_school_logo.gif"
-                                    alt="securiy gurds in montkira international school malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/prabhu_money_transfer_logo.gif"
-                                    alt="securiy gurds in prabhu money transfer malayasia">
-                            </div>
-                        </div>
-
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/aqua-walk.jpg"
-                                    alt="securiy gurds in aqua walk malayasia">
-                            </div>
-                        </div>
-
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/friends-pharmacy.jpg"
-                                    alt="securiy gurds in friends pharmacy malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/gibraltar.jpg"
-                                    alt="securiy gurds in gibraltar malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/iheal-medical-center.jpg"
-                                    alt="securiy gurds in prabhu money transfer malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/muihua-logo.jpg" alt="securiy gurds in muihua malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/palling_logo.jpg"
-                                    alt="securiy gurds in palling malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/residen-kia-pengr.jpg"
-                                    alt="securiy gurds in residen kia pengr malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/solaris_monkira.jpg"
-                                    alt="securiy gurds in solaris monkira malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/sree-utma-school.jpg"
-                                    alt="securiy gurds in sree utma school malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/aliran_damai_aprtment.png"
-                                    alt="securiy gurds in aliran damai aprtment malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/geo_logo.png" alt="securiy gurds in geo malayasia">
-                            </div>
-                        </div>
-
-                        <div class="brand-item-single">
-                            <div class="brand-items">
-                                <img src="./assets/img/clients/hotel_royal.png"
-                                    alt="securiy gurds in hotel royal malayasia">
-                            </div>
-                        </div>
-                        */?>
                     </div>
                 </div>
             </div>
