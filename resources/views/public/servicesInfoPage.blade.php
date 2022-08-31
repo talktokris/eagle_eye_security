@@ -1,13 +1,21 @@
 
    @extends('public.layouts.masterPage')
-   @section('title','Home')
+
+   @foreach ($pageData as $item)
+
+   @section('title') {{ $item->seo_title  }}   @endsection
+
+   @section('keywords') {{ $item->seo_keywords  }}   @endsection
+
+   @section('description') {{ $item->seo_description  }}   @endsection
+
    @section('contents')
 
 
 
    <div class="blog-section-area">
     <div class="container">
-        @foreach ($pageData as $item)
+
 
 
         <div class="row">
@@ -53,10 +61,10 @@
 
             <!-- Side bar Start --->
         </div>
-        @endforeach
+
     </div>
 </div>
 
+    @endforeach
 
-
-    @endsection
+@endsection

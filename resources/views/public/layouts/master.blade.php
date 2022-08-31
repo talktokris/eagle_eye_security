@@ -24,15 +24,19 @@
     <meta name="twitter:creator" content="@Eagleeyesecurity" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-    <meta name="description"
-        content="Eagle Eye Security Sdn Bhd is a principal company (Not franchise). Eagle Eye Security is a leading security services provider company in malaysia. Established 2002, The Security Guard Services in our company are one of the highest quality security services in Malaysia with good pricing available in the market. We are specialized in High End Condominium and Commercial Building for the provision as Private Agency in Malaysia ,Eagle Eye Security provides security, monitoring, consulting and investigative services. Our security solutions are tailored to your business needs" />
-    <meta name="keywords"
-        content="Malaysia Security Guard Company,security service,security service company Malaysia, Security Malaysia, security service company in Malaysia,&lt;br /&gt;security service company in kl,&lt;br /&gt;security service company kl" />
-    <TITLE>One Stop Security Solutions Consultation, Security guard company in Malaysia, best security guard company in
-        kl, No.# security guard company in kl, best security guard company in Penang, No.1# security guard company in
-        Penang Best security guard company in malaysia - Security Company in Malaysia | Security Guards Malaysia|
-        Security Guards |Local Guards Malaysia | Local Guards</TITLE>
+    <title>@yield('title')</title>
+    <meta name="keywords" content="@yield('keywords')" />
+    <meta name="description" content="@yield('description')" />
 
+
+  <?php /*
+    <title>One Stop Security Solutions Consultation, Security guard company in Malaysia, best security guard company in
+            kl, No.# security guard company in kl, best security guard company in Penang, No.1# security guard company in
+            Penang Best security guard company in malaysia - Security Company in Malaysia | Security Guards Malaysia|
+            Security Guards |Local Guards Malaysia | Local Guards</title>
+    <meta name="keywords" content="Malaysia Security Guard Company,security service,security service company Malaysia, Security Malaysia, security service company in Malaysia,&lt;br /&gt;security service company in kl,&lt;br /&gt;security service company kl" />
+    <meta name="description" content="Eagle Eye Security Sdn Bhd is a principal company (Not franchise). Eagle Eye Security is a leading security services provider company in malaysia. Established 2002, The Security Guard Services in our company are one of the highest quality security services in Malaysia with good pricing available in the market. We are specialized in High End Condominium and Commercial Building for the provision as Private Agency in Malaysia ,Eagle Eye Security provides security, monitoring, consulting and investigative services. Our security solutions are tailored to your business needs" />
+    */ ?>
 
     <!-- favicon -->
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" sizes="20x20" type="image/png" />

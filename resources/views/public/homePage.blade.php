@@ -1,6 +1,14 @@
 
    @extends('public.layouts.master')
-   @section('title','Home')
+
+   @section('title','One Stop Security Solutions Consultation, Security guard company in Malaysia, best security guard company in
+   kl, No.# security guard company in kl, best security guard company in Penang, No.1# security guard company in
+   Penang Best security guard company in malaysia - Security Company in Malaysia | Security Guards Malaysia | Security Guards | Local Guards Malaysia | Local Guards')
+
+   @section('keywords','Malaysia Security Guard Company,security service,security service company Malaysia, Security Malaysia, security service company in Malaysia,&lt;br /&gt;security service company in kl,&lt;br /&gt;security service company kl')
+
+   @section('description','Eagle Eye Security Sdn Bhd is a principal company (Not franchise). Eagle Eye Security is a leading security services provider company in malaysia. Established 2002, The Security Guard Services in our company are one of the highest quality security services in Malaysia with good pricing available in the market. We are specialized in High End Condominium and Commercial Building for the provision as Private Agency in Malaysia ,Eagle Eye Security provides security, monitoring, consulting and investigative services. Our security solutions are tailored to your business needs')
+
    @section('contents')
 
 
@@ -16,6 +24,7 @@
             </div>
             <h2 class="site-text">Eagle Eye</h2>
             <div class="baner-wrapper">
+                <?php /*
                 <div class="baner-items">
                     <div class="row align-items-center flex-reverse">
                         <div class="col-lg-7">
@@ -26,7 +35,7 @@
                                     Colorado. This means we need qualified professionals to join our team. We are
                                     looking for former police officers and ex-military members.</p>
                                 <div class="btn-wrap d-inline-block">
-                                    <a class="btn btn-border-base" href="{{url('/contact')}}">
+                                    <a class="btn btn-border-base" href="contact.html">
                                         <span class="top_left"></span>
                                         <span class="top_right"></span>
                                         <span>
@@ -39,7 +48,7 @@
                         </div>
                         <div class="col-lg-5">
                             <div class="baner-img">
-                                <img src="{{ url('assets/img/section-img/baner/banar-img-01.png')}}" alt="">
+                                <img src="./assets/img/section-img/baner/banar-img-01.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -48,18 +57,15 @@
                     <div class="row align-items-center flex-reverse">
                         <div class="col-lg-7">
                             <div class="baner-content">
-                                <h2 class="baner-title">Personal Security</h2>
-                                <h4 class="baner-subtitle">For Your Personal Safety</h4>
-                                <p>American Panthar Security is looking to expand our private security company in
-                                    Colorado. This
-                                    means we need qualified professionals to join our team. We are looking
-                                    for former police officers and ex-military members.</p>
+                                <h2 class="baner-title">Industrial Security</h2>
+                                <h4 class="baner-subtitle">Fast Efficient Reliable</h4>
+                                <p>Our provides trained and experienced security guards for industrial sectors. Please send enquired.</p>
                                 <div class="btn-wrap d-inline-block">
-                                    <a class="btn btn-border-base" href="contact.html" tabindex="0">
+                                    <a class="btn btn-border-base" href="{{url('/contact')}}">
                                         <span class="top_left"></span>
                                         <span class="top_right"></span>
                                         <span>
-                                            CONTACT US </span>
+                                            GET A QUOTE </span>
                                         <span class="bottom_left"></span>
                                         <span class="bottom_right"></span>
                                     </a>
@@ -77,18 +83,15 @@
                     <div class="row align-items-center flex-reverse">
                         <div class="col-lg-7">
                             <div class="baner-content">
-                                <h2 class="baner-title">Security Service</h2>
-                                <h4 class="baner-subtitle">For Your Personal Safety</h4>
-                                <p>American Panthar Security is looking to expand our private security company in
-                                    Colorado. This
-                                    means we need qualified professionals to join our team. We are looking
-                                    for former police officers and ex-military members.</p>
+                                <h2 class="baner-title">Industrial Security</h2>
+                                <h4 class="baner-subtitle">Fast Efficient Reliable</h4>
+                                <p>Our provides trained and experienced security guards for industrial sectors. Please send enquired.</p>
                                 <div class="btn-wrap d-inline-block">
-                                    <a class="btn btn-border-base" href="contact.html">
+                                    <a class="btn btn-border-base" href="{{url('/contact')}}">
                                         <span class="top_left"></span>
                                         <span class="top_right"></span>
                                         <span>
-                                            CONTACT US </span>
+                                            GET A QUOTE </span>
                                         <span class="bottom_left"></span>
                                         <span class="bottom_right"></span>
                                     </a>
@@ -131,6 +134,183 @@
                         </div>
                     </div>
                 </div>
+
+                */ ?>
+                <div class="baner-items">
+                    <div class="row align-items-center flex-reverse">
+                        <div class="col-lg-7">
+                            <div class="baner-content">
+                                <h2 class="baner-title">Personal Security</h2>
+                                <h4 class="baner-subtitle">For Your Personal &amp; Family Safety</h4>
+                                <p>We have former police officers, ex-military members and highly skilled bodyguards to ensure your personal and family safety.
+                                    Contact us now or send online enquiry to get fallow up call from us. You can also email to us on <a href="mailto:info@eagleeyesecurity.com.my">info@eagleeyesecurity.com.my</a>
+                                </p>
+                                <div class="btn-wrap d-inline-block">
+
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
+                                                <span class="top_left"></span>
+                                                <span class="top_right"></span>
+                                                <span>
+                                                    GET A QUOTE </span>
+                                                <span class="bottom_left"></span>
+                                                <span class="bottom_right"></span>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="baner-img-logo">
+                                                <img src="./assets/img/section-img/baner/banar-logos.png" alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="baner-img">
+                                <img src="./assets/img/section-img/baner/banar-img-04.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="baner-items">
+                    <div class="row align-items-center flex-reverse">
+                        <div class="col-lg-7">
+                            <div class="baner-content">
+                                <h2 class="baner-title">Residential Security </h2>
+                                <h4 class="baner-subtitle">Residential Security Solutions</h4>
+                                <p>We are specialized on  security of high-end condominium, housings, gated community and premium guards services for  embassy.
+                                    Contact us now or send online enquiry to get fallow up call from us. You can also email to us on <a href="mailto:info@eagleeyesecurity.com.my">info@eagleeyesecurity.com.my</a> </p>
+                                    <div class="btn-wrap d-inline-block">
+
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
+                                                    <span class="top_left"></span>
+                                                    <span class="top_right"></span>
+                                                    <span>
+                                                        GET A QUOTE </span>
+                                                    <span class="bottom_left"></span>
+                                                    <span class="bottom_right"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <div class="baner-img-logo">
+                                                    <img src="./assets/img/section-img/baner/banar-logos.png" alt="">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="baner-img">
+                                <img src="./assets/img/section-img/baner/banar-img-01.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="baner-items">
+                    <div class="row align-items-center flex-reverse">
+                        <div class="col-lg-7">
+                            <div class="baner-content">
+                                <h2 class="baner-title">Commercial Security</h2>
+
+                                <h4 class="baner-subtitle">Commercial Security Solutions</h4>
+                                <p>We have experienced security professional to train our security guards for commercial complex as per company rules and regulations.
+                                    Contact us now or send online enquiry to get fallow up call from us. You can also email to us on <a href="mailto:info@eagleeyesecurity.com.my">info@eagleeyesecurity.com.my</a> </p>
+
+                                    <div class="btn-wrap d-inline-block">
+
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
+                                                    <span class="top_left"></span>
+                                                    <span class="top_right"></span>
+                                                    <span>
+                                                        GET A QUOTE </span>
+                                                    <span class="bottom_left"></span>
+                                                    <span class="bottom_right"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <div class="baner-img-logo">
+                                                    <img src="./assets/img/section-img/baner/banar-logos.png" alt="">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="baner-img">
+                                <img src="./assets/img/section-img/baner/banar-img-03.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="baner-items">
+                    <div class="row align-items-center flex-reverse">
+                        <div class="col-lg-7">
+                            <div class="baner-content">
+                                <h2 class="baner-title">Industrial Security</h2>
+                                <h4 class="baner-subtitle">Fast Efficient Reliable</h4>
+                                <p>Our provides trained and experienced security guards for industrial sectors. Please send enquired.
+                                    Contact us now or send online enquiry to get fallow up call from us. You can also email to us on <a href="mailto:info@eagleeyesecurity.com.my">info@eagleeyesecurity.com.my</a>
+                                </p>
+                                <div class="btn-wrap d-inline-block">
+
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
+                                                <span class="top_left"></span>
+                                                <span class="top_right"></span>
+                                                <span>
+                                                    GET A QUOTE </span>
+                                                <span class="bottom_left"></span>
+                                                <span class="bottom_right"></span>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="baner-img-logo">
+                                                <img src="./assets/img/section-img/baner/banar-logos.png" alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="baner-img">
+                                <img src="{{ url('assets/img/section-img/baner/banar-img-02.png')}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -413,7 +593,7 @@
                                 market place. Service providers are to increase and regenerate their products in line
                                 with the expectations of the customers. In the new century, private security
                                 organizations are moving towards a new professionalism.</p>
-                            <a class="btn_01" href="about_us.php">Read More</a>
+                            <a class="btn_01" href="{{ url('about-us')}}">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -427,7 +607,7 @@
                     <div class="service-single-item-list">
                         <div class="service-single-item-2">
                             <div class="thumb">
-                                <img src="{{url('assets/img/section-img/service/main')}}/{{$item->image_small}}" alt="">
+                                <img src="{{url('assets/images/services')}}/{{$item->id}}/{{$item->image_mid}}" alt="">
                                 <div class="animate-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="43.888" height="43.888"
                                         viewBox="0 0 43.888 43.888">
@@ -524,7 +704,7 @@
                             your personal or commercial premises to meet your safety needs.
                         </p>
                         <div class="btn-wrap d-inline-block">
-                            <a class="btn btn-border-base" href="get-quote.html">
+                            <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
                                 <span class="top_left"></span>
                                 <span class="top_right"></span>
                                 <span>
@@ -794,7 +974,7 @@
                                             Call Now </span>
                                     </h3>
                                     <p class="icon-box-description">
-                                        +603 4041 3200 </p>
+                                        <a href="tel:+60340413200">+603 4041 3200 </a></p>
                                 </div>
                             </div>
                         </div>
@@ -813,7 +993,7 @@
                         <div class="media-body content align-self-center">
                             <a class="icon-box-anchor">
                                 <h3 class="titlee">HIRE PREMIUM SECURITY SERVICES</h3>
-                            </a><a class="read-more-url">Get Quote <span></span></a>
+                            </a><a class="read-more-url" href="{{ url('/enquiry')}}">Get Quote <span></span></a>
                         </div>
                     </div>
                 </div>
@@ -827,7 +1007,7 @@
                         <div class="media-body content align-self-center">
                             <a class="icon-box-anchor">
                                 <h3 class="titlee">HIGHLY TRAINED OPERATION TEAM</h3>
-                            </a><a class="read-more-url">Get Quote <span></span></a>
+                            </a><a class="read-more-url" href="{{ url('/enquiry')}}">Get Quote <span></span></a>
                         </div>
                     </div>
                 </div>

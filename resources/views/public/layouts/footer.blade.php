@@ -11,7 +11,7 @@
                     <div class="footer-widget widget" style="padding:1em;">
                         <div class="about_me_widget style-01">
                             <a href="{{ url("/") }}" class="footer-logo-two" style="width: 80%;"> <img
-                                    src="assets/img/logo/white-logo.png" alt="footer logo"></a>
+                                    src="{{ url("/assets/img/logo/white-logo.png")}}" alt="Eagle Eye White logo"></a>
                             <p style="text-align: center; width:100%;">Do you want to be part of eagle eye security
                                 professional
                                 team </p>

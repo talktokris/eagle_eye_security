@@ -24,9 +24,9 @@ if(($CurrentRoute=="contact")||($CurrentRoute=="enquiry-store")){   $contactPage
         <div class="responsive-menu">
             <div class="logo-wrapper">
                 <a href="{{ url("/") }}" class="logo">
-                    <img src="assets/img/logo/logo.png" alt="" />
+                    <img src="{{ url("assets/img/logo/logo.png")}}" alt="" />
                 </a>
-                <a href="index.html" class="logo-white-display"> <img src="assets/img/logo/white-logo.png"
+                <a href="index.html" class="logo-white-display"> <img src="{{ url("assets/img/logo/white-logo.png")}}"
                         alt="footer logo"></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#themebuzs_main_menu"

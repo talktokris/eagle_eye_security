@@ -1,13 +1,20 @@
 
    @extends('public.layouts.masterPage')
-   @section('title','Home')
-   @section('contents')
 
+   @foreach ($pageData as $item)
+
+   @section('title')  Eagle Eye Security News &map; Notice : {{ $item->title  }}   @endsection
+
+   @section('keywords')  Eagle Eye Security News &map; Notice , {{ $item->title  }}   @endsection
+
+   @section('description') Eagle Eye Security News -{{ $item->text  }}   @endsection
+
+   @section('contents')
 
 
    <div class="blog-section-area">
     <div class="container">
-        @foreach ($pageData as $item)
+
 
 
         <div class="row">
@@ -54,10 +61,10 @@
 
             <!-- Side bar Start --->
         </div>
-        @endforeach
+
     </div>
 </div>
 
-
+@endforeach
 
     @endsection

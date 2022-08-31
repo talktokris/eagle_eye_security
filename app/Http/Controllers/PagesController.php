@@ -95,9 +95,11 @@ class PagesController extends Controller
 
     public function services(){
 
-        $pageData = Service_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
 
-        return view("public.servicesPage")->with(compact("pageData"));
+        $pageData = Service_list::where('status','=',1)->orderBy('id', 'ASC')->get();
+
+        return view("public.servicesPage")->with(compact("pageData"))->with(compact("newsData"));
 
 
     }

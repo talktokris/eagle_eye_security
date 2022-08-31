@@ -15426,3 +15426,26 @@ ul.blocks-gallery-grid li:before {
     margin-right: 10px;
     border: 2px solid #fff;
   }
+  .second {
+    font-size: 45px !important;
+    text-align:center;
+  }
+  .baner-subtitle{
+    text-align:center;
+  }
+  .baner-subtitle{
+    text-align:center;
+  }
+  .baner-title{
+    text-align:center;
+    font-size: 70px !important;
+  }
+
+.baner-content p {
+  margin-right: 10px !important;
+}
+
+
+.baner-img-logo img{
+    width:70%;
+}
