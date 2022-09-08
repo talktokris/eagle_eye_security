@@ -19,6 +19,9 @@ use App\Models\Gallery_type_list;
 
 use Intervention\Image\Facades\Image;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\EnquiryMail;
+
 class PagesController extends Controller
 {
     //
@@ -163,6 +166,8 @@ class PagesController extends Controller
 
     public function enquiryStore(Request $request){
 
+        $toAdminEmail='talktokris@gmail.com';
+
         $pageData = Service_list::where('status','=',1)->orderBy('id', 'DESC')->get();
         $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
 
@@ -193,7 +198,20 @@ class PagesController extends Controller
 
 
             if(!$newsSave){      return redirect('/enquiry')->with('flash_message_error', 'Internal error. Please email to support@ealgeeyesecurity.com.my'); }
-            else {   return redirect('/enquiry')->with('flash_message_success', 'Your enquiry has been submitted successfully');}
+            else {
+
+                $details = [
+
+                    'title' => $data['title'],
+                    'name' =>  $data['name'],
+                    'email' =>  $data['email'],
+                    'phone' =>  $data['phone'],
+                    'message' => $data['message'],
+
+                ];
+                Mail::to($toAdminEmail)->send(new EnquiryMail($details));
+
+                return redirect('/enquiry')->with('flash_message_success', 'Your enquiry has been submitted successfully');}
 
         }
 
