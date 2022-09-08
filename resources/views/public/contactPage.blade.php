@@ -228,10 +228,10 @@
 <div class="contact-map contact-section padding-top-120 padding-bottom-120">
     <div class="container">
         <div class="theme-heading-title team-page text-center">
-            <h3 class="title">Fill up the form if you have any question</h3>
+            <h3 class="title">Office Location</h3>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="google-map">
                     <div class="google-map contact-map">
                         <div class="mapbox"></div>
@@ -241,6 +241,7 @@
                     </div>
                 </div>
             </div>
+            <?php /*
             <div class="col-lg-6">
                 <div class="contact-page-form-two">
                     <form action="#" method="post">
@@ -341,6 +342,8 @@
                     </form>
                 </div>
             </div>
+
+            */ ?>
         </div>
     </div>
 </div>

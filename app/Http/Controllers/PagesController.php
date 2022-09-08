@@ -174,7 +174,7 @@ class PagesController extends Controller
 
         $validatedData = $request->validate([
             'title' => 'required|string|min:2|max:10',
-            'name' => 'required|string|min:15|max:150',
+            'name' => 'required|string|min:5|max:150',
             'email' => 'required|email|max:150',
             'phone' => 'required|string|min:7|max:15',
             'message' => 'required|string|min:15|max:150',
@@ -193,7 +193,7 @@ class PagesController extends Controller
 
 
             if(!$newsSave){      return redirect('/enquiry')->with('flash_message_error', 'Internal error. Please email to support@ealgeeyesecurity.com.my'); }
-            else {   return redirect('/enquiry')->with('flash_message_success', 'your enquiry has been submitted successfully');}
+            else {   return redirect('/enquiry')->with('flash_message_success', 'Your enquiry has been submitted successfully');}
 
         }
 
