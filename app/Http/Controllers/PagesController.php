@@ -38,6 +38,18 @@ class PagesController extends Controller
 
     }
 
+    public function index_old(){
+
+        $pageData = Service_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+        $clientData = Clients_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+        $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+
+        return view("public.homePageOld")->with(compact("pageData"))->with(compact("clientData"))->with(compact("newsData"));
+
+
+    }
+
     public function aboutUs(){
 
 

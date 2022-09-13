@@ -15450,44 +15450,6 @@ ul.blocks-gallery-grid li:before {
     width:70%;
 }
 
-/* New Review Changes by Mr Brain  Start */
-
-.logo-wrapper {
-    max-width: 425px !important;
-}
-.topbar-inner .left-content .social-icon ul li a {
-  font-size: 17px !important;
-}
-.topbar-inner .right-contnet ul li a {
-
-  font-size: 17px !important;
-}
-
-.navbar-area .custom-container .nav-right-content .btn-wrapp ul li span {
-  font-size: 24px;
-}
-
-.navbar-area .custom-container .nav-right-content .btn-wrapp ul li {
-  font-size: 24px;
-}
-
-.navbar-area .custom-container .nav-right-content .btn-wrapp ul li a {
-  font-size: 24px;
-}
-.topbar-inner {
-
-  padding: 5px 0 !important;
-}
 
 
-@media only screen and (max-width: 384px) {
 
-  .logo-wrapper {
-        max-width: 275px !important;
-    }
-}
-
-.baner-img-logo img {
-    width: 90% !important ;
-  }
- /* New Review Changes by Mr Brain  End */

@@ -20,13 +20,13 @@ if(($CurrentRoute=="contact")||($CurrentRoute=="enquiry-store")){   $contactPage
       ?>
 
 <nav class="navbar navbar-area navbar-expand-lg navigation-style-01 menu-02 navigation-before">
-    <div class="container-fluid custom-container">
+    <div class="container custom-container">
         <div class="responsive-menu">
             <div class="logo-wrapper">
                 <a href="{{ url("/") }}" class="logo">
                     <img src="{{ url("assets/img/logo/logo-name.png")}}" alt="" />
                 </a>
-                <a href="{{ url("/")}}" class="logo-white-display"> <img src="{{ url("assets/img/logo/logo-name-white.png")}}"
+                <a href="index.html" class="logo-white-display"> <img src="{{ url("assets/img/logo/logo-name-white.png")}}"
                         alt="footer logo"></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#themebuzs_main_menu"

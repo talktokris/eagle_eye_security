@@ -1,5 +1,5 @@
 <div class="topbar-area">
-    <div class="container-fluid custom-container">
+    <div class="container custom-container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="topbar-inner">
