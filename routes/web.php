@@ -21,7 +21,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [App\Http\Controllers\PagesController::class, 'index'])->name('landing');
+//Route::get('/', [App\Http\Controllers\PagesController::class, 'index'])->name('landing');
+
+Route::match(array('GET','POST'),'/', [App\Http\Controllers\PagesController::class, 'index'])->name('landing');
+
+
 Route::get('/home-old', [App\Http\Controllers\PagesController::class, 'index_old'])->name('landing');
 
 Route::get('/about-us', [App\Http\Controllers\PagesController::class, 'aboutUs'])->name('about-us');

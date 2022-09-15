@@ -1,5 +1,5 @@
 
-   @extends('public.layouts.master')
+   @extends('public.layouts.masterPage')
 
    @section('title','One Stop Security Solutions Consultation, Security guard company in Malaysia, best security guard company in
    kl, No.# security guard company in kl, best security guard company in Penang, No.1# security guard company in
@@ -13,243 +13,254 @@
 
 
 
+       <!-- service area  -->
+    <div class="service-area">
+        <div class="container">
+            <div class="section-wrapper">
 
-   <!-- slider area  -->
-    <div class="baner-slider">
-        <div class="container banar-container">
-            <div class="baner-shapes">
-                <img class="cross-01 ab" src="./assets/img/shapes/cross-01.png" alt="">
-                <img class="cross-02 ab" src="./assets/img/shapes/cross-01.png" alt="">
-                <img class="cross-03 ab" src="./assets/img/shapes/cross-01.png" alt="">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="theme-heading-title">
+                            <h4 class="subtitle">Our Premium Services <img class="bullet" src="./assets/img/shapes/bullet.png"
+                                    alt=""> </h4>
+                            <h2 class="title"> Eagle Eye Security <br>
+                                Fast Efficient and Reliable</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-wrapperr">
+                            <p>Entering the new millennium and the challenges of globalization, service providers in
+                                developing nations are faced with the challenge to compete and excel in a liberalized
+                                market place. Service providers are to increase and regenerate their products in line
+                                with the expectations of the customers. In the new century, private security
+                                organizations are moving towards a new professionalism.</p>
+                            <a class="btn_01" href="{{ url('about-us')}}">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h2 class="site-text">Eagle Eye</h2>
-            <div class="baner-wrapper">
+        </div>
+        <div class="container">
+            <div class="row"  style="padding-bottom: 30px;">
+                @foreach ($pageData as $item)
+                <?php if(($item->id) <=4) { ?>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-single-item-list">
+                        <div class="service-single-item-2">
+                            <div class="thumbs">
+                                <img src="{{url('assets/images/services')}}/{{$item->id}}/{{$item->image_mid}}" alt="">
 
-                <div class="baner-items">
-                    <div class="row align-items-center flex-reverse">
-                        <div class="col-lg-7">
-                            <div class="baner-content">
-                                <h2 class="baner-title">Personal Security</h2>
-                                <h4 class="baner-subtitle">For Your Personal &amp; Family Safety</h4>
-                                <p>We have former police officers, ex-military members and highly skilled bodyguards to ensure your personal and family safety.
-                                    Contact us now or send online enquiry to get fallow up call from us. You can also email to us on <a href="mailto:info@eagleeyesecurity.com.my">info@eagleeyesecurity.com.my</a>
-                                </p>
-                                <div class="btn-wrap d-inline-block">
-
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
-                                                <span class="top_left"></span>
-                                                <span class="top_right"></span>
-                                                <span>
-                                                    GET A QUOTE </span>
-                                                <span class="bottom_left"></span>
-                                                <span class="bottom_right"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="baner-img-logo">
-                                                <img src="./assets/img/section-img/baner/banar-logos.png" alt="">
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="baner-img">
-                                <img src="./assets/img/section-img/baner/banar-img-04.png" alt="">
+                            <div class="details">
+                                <h4 class="title"><a href="{{url('/services')}}/{{ $item->link}}">{{ $item->title_short}}</a></h4>
+                                <a class="read-btn" href="{{url('/services')}}/{{ $item->link}}"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php } ?>
 
-
-                <div class="baner-items">
-                    <div class="row align-items-center flex-reverse">
-                        <div class="col-lg-7">
-                            <div class="baner-content">
-                                <h2 class="baner-title">Residential Security </h2>
-                                <h4 class="baner-subtitle">Residential Security Solutions</h4>
-                                <p>We are specialized on  security of high-end condominium, housings, gated community and premium guards services for  embassy.
-                                    Contact us now or send online enquiry to get fallow up call from us. You can also email to us on <a href="mailto:info@eagleeyesecurity.com.my">info@eagleeyesecurity.com.my</a> </p>
-                                    <div class="btn-wrap d-inline-block">
-
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
-                                                    <span class="top_left"></span>
-                                                    <span class="top_right"></span>
-                                                    <span>
-                                                        GET A QUOTE </span>
-                                                    <span class="bottom_left"></span>
-                                                    <span class="bottom_right"></span>
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-8">
-                                                <div class="baner-img-logo">
-                                                    <img src="./assets/img/section-img/baner/banar-logos.png" alt="">
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="baner-img">
-                                <img src="./assets/img/section-img/baner/banar-img-01.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="baner-items">
-                    <div class="row align-items-center flex-reverse">
-                        <div class="col-lg-7">
-                            <div class="baner-content">
-                                <h2 class="baner-title">Commercial Security</h2>
-
-                                <h4 class="baner-subtitle">Commercial Security Solutions</h4>
-                                <p>We have experienced security professional to train our security guards for commercial complex as per company rules and regulations.
-                                    Contact us now or send online enquiry to get fallow up call from us. You can also email to us on <a href="mailto:info@eagleeyesecurity.com.my">info@eagleeyesecurity.com.my</a> </p>
-
-                                    <div class="btn-wrap d-inline-block">
-
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
-                                                    <span class="top_left"></span>
-                                                    <span class="top_right"></span>
-                                                    <span>
-                                                        GET A QUOTE </span>
-                                                    <span class="bottom_left"></span>
-                                                    <span class="bottom_right"></span>
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-8">
-                                                <div class="baner-img-logo">
-                                                    <img src="./assets/img/section-img/baner/banar-logos.png" alt="">
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-
-
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="baner-img">
-                                <img src="./assets/img/section-img/baner/banar-img-03.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="baner-items">
-                    <div class="row align-items-center flex-reverse">
-                        <div class="col-lg-7">
-                            <div class="baner-content">
-                                <h2 class="baner-title">Industrial Security</h2>
-                                <h4 class="baner-subtitle">Fast Efficient Reliable</h4>
-                                <p>Our provides trained and experienced security guards for industrial sectors. Please send enquired.
-                                    Contact us now or send online enquiry to get fallow up call from us. You can also email to us on <a href="mailto:info@eagleeyesecurity.com.my">info@eagleeyesecurity.com.my</a>
-                                </p>
-                                <div class="btn-wrap d-inline-block">
-
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
-                                                <span class="top_left"></span>
-                                                <span class="top_right"></span>
-                                                <span>
-                                                    GET A QUOTE </span>
-                                                <span class="bottom_left"></span>
-                                                <span class="bottom_right"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="baner-img-logo">
-                                                <img src="./assets/img/section-img/baner/banar-logos.png" alt="">
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="baner-img">
-                                <img src="{{ url('assets/img/section-img/baner/banar-img-02.png')}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
         </div>
     </div>
-    <!-- slider area  end -->
+    <!-- service area end -->
+
+
 
     <!-- team area  -->
     <div class="team-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="theme-heading-title text-center">
-                        <h4 class="subtitle yellow"><img class="bullet bullet-01"
-                                src="{{url('assets/img/shapes/bullet-01-yellow.png')}}" alt=""> Our Top Servcies
-                            <img class="bullet" src="{{ url('assets/img/shapes/bullet-yellow.png')}}" alt="">
-                        </h4>
-                        <h2 class="title text-white">Well offers range of security services</h2>
+
+                <div class="col-lg-8">
+                    <div class="col-lg-12">
+                        <div class="theme-heading-title text-center"  style="padding-bottom: 50px;">
+                            <h4 class="subtitle"><img class="bullet bullet-01"
+                                    src="{{url('assets/img/shapes/bullet-01.png')}}" alt=""> Contact US
+                                <img class="bullet" src="{{ url('assets/img/shapes/bullet.png')}}" alt="">
+                            </h4>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="team-wrapper">
-                <div class="team-active">
-                    @foreach ($pageData as $item)
+                    <div class="request-form">
+                        <div role="form">
+                            <form class="row homeForm" method="post" action="{{ url('/') }}" >
+                                <div class="widget-footer-subscribe pt-1 pb-1" style="width:100%;">
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+
+                                        @if(Session::has('flash_message_success'))
+                                        <div class="alert alert-success border-0 bg-success alert-dismissible fade show py-2">
+                                            <div class="d-flex align-items-center">
+                                                <div class="font-35 text-white"><i class="bx bxs-check-circle"></i>
+                                                </div>
+                                                <div class="ms-3">
+                                                    <h6 class="mb-0 text-white">Success Alerts</h6>
+                                                    <div class="text-white">{!! session('flash_message_success') !!} </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                        @endif
+
+                                        @if(Session::has('flash_message_error'))
+                                        <div class="alert alert-danger border-0 bg-danger alert-dismissible fade show py-2">
+                                            <div class="d-flex align-items-center">
+                                                <div class="font-35 text-white"><i class="bx bxs-message-square-x"></i>
+                                                </div>
+                                                <div class="ms-3">
+                                                    <h6 class="mb-0 text-white">Error Alerts</h6>
+                                                    <div class="text-white">{!! session('flash_message_error') !!}</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                        @endif
+                                        <!---- allert message End -->
+                                        <div class="single-input-inner mb-3">
+
+                                            <select name="title" class="form-control " id="title" style="height: 58px;" required="">
+                                                                <?php if(old('title')){
+
+                                                                    ?>
+                                                                    <option value="<?php echo old('title') ?>"><?php echo  old('title') ?></option>
+                                                                    <?php  }  ?>
+                                                                <option value="Dr">Dr</option>
+                                                                <option value="Mr">Mr</option>
+                                                                <option value="Mrs">Mrs</option>
+                                                                <option value="Miss">Miss</option>
+
+                                                            </select>
+                                                            @error('title')
+                                                                <div class="invalid-feedback">
+                                                                    {{ $message }}
+                                                                </div>
+                                                            @enderror
+
+                                        </div>
+
+                                        <div class="single-input-inner mb-3">
+
+                                                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="validationCustom03" placeholder="Full Name " value="{{ old('name') }}" required="">
+
+                                                @error('name')
+                                                <div class="invalid-feedback">
+                                            {{ $message }}
+                                                </div>
+                                                @enderror
+                                            </div>
+
+                                        <textarea name="message"  placeholder="Write messgae*" class="form-control @error('message') is-invalid @enderror" required="" >{{ old('message') }}</textarea>
 
 
 
-                    <div class="team-items-single">
-                        <div class="single-team-inner style-overlay">
-                            <div class="thumb">
-                                <img src="{{ url('assets/images/services')}}/{{ $item->id }}/{{ $item->image_slider}}" alt="">
-                                <span class="animate-1"></span>
-                                <span class="animate-2"></span>
-                                <span class="animate-3"></span>
-                                <span class="animate-4"></span>
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <a href="{{ url('/services')}}/{{ $item->link}}">
-                                        <h4 class="title">{{ $item->title_short}}</h4>
-                                    </a>
-                                    <p>{{ $item->title}}</p>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="single-input-inner mb-3">
+                                            <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="validationCustom03" placeholder="Email Address " value="{{ old('email') }}" required="">
+
+                                            @error('email')
+                                            <div class="invalid-feedback">
+                                        {{ $message }}
+                                            </div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="single-input-inner mb-3">
+                                            <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror" id="validationCustom03" placeholder="Phone Number" value="{{ old('phone') }}" required="">
+
+                                            @error('phone')
+                                            <div class="invalid-feedback">
+                                        {{ $message }}
+                                            </div>
+                                            @enderror
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="btn-panthar btn-border-base btn-style-white text-white w-100">
+                                                <span class="top_left"></span>
+                                                <span class="top_right"></span>
+                                                <i class="fas fa-paper-plane"></i> Send
+                                                <span class="bottom_left"></span>
+                                                <span class="bottom_right"></span>
+                                            </button>
+                                        </div>
+
+                                    </div>
                                 </div>
-                            </div>
+
+
+                                </div>
+                            </form>
                         </div>
                     </div>
 
-                    @endforeach
-
-
                 </div>
+
+
+
+                <div class="col-lg-4">
+
+                    <div class="col-lg-12">
+                        <div class="theme-heading-title text-center" style="padding-bottom: 50px;">
+                            <h4 class="subtitle"><img class="bullet bullet-01"
+                                    src="{{url('assets/img/shapes/bullet-01.png')}}" alt=""> Top Products
+                                <img class="bullet" src="{{ url('assets/img/shapes/bullet.png')}}" alt="">
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="footer-widget widget">
+                        <ul class="theme-recent-post-wrap news-footer" >
+
+
+
+                            <li class="theme-recent-post-item" style="border-bottom: 1px dashed red !important;">
+                                <div class="thumb newImg">
+                                    <a href="{{ url("/assets/images/security_VMS_catalog.pdf")}}" target="_blank">
+                                        <img src="{{ url("/assets/images/security_vms.png")}}" alt="Visitor Managment System">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="{{ url("/assets/images/security_VMS_catalog.pdf")}}"  target="_blank" class="news-footer-link">Visitor Management System</a></h4>
+                                </div>
+                            </li>
+
+
+                            <li class="theme-recent-post-item" style="border-bottom: 1px dashed red !important;">
+                                <div class="thumb newImg">
+                                    <a href="{{ url("/assets/images/security_Guard_Tour_system.pdf")}}"  target="_blank">
+                                        <img src="{{ url("/assets/images/security_digital_guard_tour.png")}}" alt="Digital Guard Tour System">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="{{ url("/assets/images/security_Guard_Tour_system.pdf")}}"  target="_blank" class="news-footer-link">Digital Guard Tour System</a></h4>
+                                </div>
+                            </li>
+
+                            <li class="theme-recent-post-item" style="border-bottom: 1px dashed red !important;">
+                                <div class="thumb newImg">
+                                    <a href="{{ url("/assets/images/security_CCTV_catalog.pdf")}}"  target="_blank">
+                                        <img src="{{ url("/assets/images/security-ip-camera.png")}}" alt="Digital Guard Tour System">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="{{ url("/assets/images/security_CCTV_catalog.pdf")}}"  target="_blank" class="news-footer-link">Digital Guard Tour System</a></h4>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+
+                    </div>
+                </div>
+
+
             </div>
+
+
         </div>
     </div>
     <!-- team area start -->
@@ -363,210 +374,8 @@
     <!-- servcie area end ---->
 
 
+       <!-- history area  -->
 
-    <!-- service area  -->
-    <div class="service-area">
-        <div class="container">
-            <div class="section-wrapper">
-
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="theme-heading-title">
-                            <h4 class="subtitle">OUR SERVICES <img class="bullet" src="./assets/img/shapes/bullet.png"
-                                    alt=""> </h4>
-                            <h2 class="title"> Eagle Eye Security <br>
-                                Fast Efficient and Reliable</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="service-wrapperr">
-                            <p>Entering the new millennium and the challenges of globalization, service providers in
-                                developing nations are faced with the challenge to compete and excel in a liberalized
-                                market place. Service providers are to increase and regenerate their products in line
-                                with the expectations of the customers. In the new century, private security
-                                organizations are moving towards a new professionalism.</p>
-                            <a class="btn_01" href="{{ url('about-us')}}">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                @foreach ($pageData as $item)
-                <?php if(($item->id) <=4) { ?>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-single-item-list">
-                        <div class="service-single-item-2">
-                            <div class="thumb">
-                                <img src="{{url('assets/images/services')}}/{{$item->id}}/{{$item->image_mid}}" alt="">
-                                <div class="animate-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.888" height="43.888"
-                                        viewBox="0 0 43.888 43.888">
-                                        <g id="errrddt" data-name="Group 4112"
-                                            transform="translate(12737.236 -182.425)">
-                                            <circle id="Elldghdipse_242" data-name="Ellipse 242" cx="2.481" cy="2.481"
-                                                r="2.481" transform="translate(-12717.772 202.054)" fill="#ba1111">
-                                            </circle>
-                                            <path id="fda" data-name="Path 10606"
-                                                d="M3420.1,1564.089a7.7,7.7,0,1,1,7.7-7.7A7.705,7.705,0,0,1,3420.1,1564.089Zm0-15.108a7.412,7.412,0,1,0,7.412,7.411A7.42,7.42,0,0,0,3420.1,1548.981Z"
-                                                transform="translate(-16135.391 -1351.857)" fill="#ba1111"></path>
-                                            <path id="fgfylij" data-name="Path 10607"
-                                                d="M3433.511,1575.29A5.485,5.485,0,1,1,3439,1569.8,5.492,5.492,0,0,1,3433.511,1575.29Zm0-10.686a5.2,5.2,0,1,0,5.2,5.2A5.207,5.207,0,0,0,3433.511,1564.6Z"
-                                                transform="translate(-16148.803 -1365.269)" fill="#ba1111"></path>
-                                            <g id="fvbnnj" data-name="Group 4049"
-                                                transform="translate(-12728.114 191.994)">
-                                                <g id="jkktdfc" data-name="Group 4047">
-                                                    <rect id="Rectangldde_719" data-name="Rectangle 719" width="0.285"
-                                                        height="4.198" transform="translate(4.167)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="ffdwejk" data-name="Rectangle 720" width="4.31"
-                                                        height="0.285" transform="translate(0 4.055)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectanjkgdfgle_721" data-name="Rectangle 721" width="4.31"
-                                                        height="0.285" transform="translate(21.283 4.055)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectangafaljhgle_722" data-name="Rectangle 722"
-                                                        width="0.285" height="4.198" transform="translate(21.141)"
-                                                        fill="#484848">
-                                                    </rect>
-                                                </g>
-                                                <g id="grdfh" data-name="Group 4048" transform="translate(0 20.841)">
-                                                    <rect id="fhhfh" data-name="Rectangle 723" width="0.285"
-                                                        height="4.198" transform="translate(21.141 0.142)"
-                                                        fill="#484848"></rect>
-                                                    <rect id="Rectangjkhkfle_724" data-name="Rectangle 724" width="4.31"
-                                                        height="0.285" transform="translate(21.283)" fill="#484848">
-                                                    </rect>
-                                                    <rect id="Rectangkuule_725" data-name="Rectangle 725" width="4.31"
-                                                        height="0.285" fill="#484848"></rect>
-                                                    <rect id="Rectangle_726" data-name="Rectangle 726" width="0.285"
-                                                        height="4.197" transform="translate(4.167 0.142)"
-                                                        fill="#484848"></rect>
-                                                </g>
-                                            </g>
-                                            <g id="asggfgf" data-name="Group 4050"
-                                                transform="translate(-12737.236 203.764)">
-                                                <path id="gggtrrr" data-name="Path 10608"
-                                                    d="M3548.683,1598.838h-10.752a.605.605,0,0,1,0-1.211h10.752a.605.605,0,0,1,0,1.211Z"
-                                                    transform="translate(-3505.4 -1597.627)" fill="#484848"></path>
-                                                <path id="Path_10609" data-name="Path 10609"
-                                                    d="M3323.189,1598.838h-10.867a.605.605,0,0,1,0-1.211h10.867a.605.605,0,1,1,0,1.211Z"
-                                                    transform="translate(-3311.717 -1597.627)" fill="#484848"></path>
-                                            </g>
-                                            <g id="yhujjj" data-name="Group 4051"
-                                                transform="translate(-12715.897 182.425)">
-                                                <path id="Path_10610" data-name="Path 10610"
-                                                    d="M3463.116,1684.4a.605.605,0,0,1-.6-.605v-10.752a.6.6,0,1,1,1.21,0V1683.8A.605.605,0,0,1,3463.116,1684.4Z"
-                                                    transform="translate(-3462.511 -1640.515)" fill="#484848"></path>
-                                                <path id="Path_10611" data-name="Path 10611"
-                                                    d="M3463.116,1458.911a.605.605,0,0,1-.6-.606v-10.867a.6.6,0,1,1,1.21,0v10.867A.605.605,0,0,1,3463.116,1458.911Z"
-                                                    transform="translate(-3462.511 -1446.833)" fill="#484848"></path>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4 class="title"><a href="{{url('/services')}}/{{ $item->link}}">{{ $item->title_short}}</a></h4>
-                                <a class="read-btn" href="{{url('/services')}}/{{ $item->link}}"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php } ?>
-
-                @endforeach
-
-            </div>
-        </div>
-    </div>
-    <!-- service area end -->
-
-
-
-    <!-- get a quote area  -->
-    <div class="get-quote margin-bottom-120 ">
-        <div class="container">
-            <div class="row align-items-center get-flex-reverse">
-                <div class="col-md-12">
-                    <div class="quote-message">
-                        <p style="padding:1em;">As the leader in security services provider, we can help you to
-                            customize
-                            your personal or commercial premises to meet your safety needs.
-                        </p>
-                        <div class="btn-wrap d-inline-block">
-                            <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
-                                <span class="top_left"></span>
-                                <span class="top_right"></span>
-                                <span>
-                                    GET A QUOTE</span>
-                                <span class="bottom_left"></span>
-                                <span class="bottom_right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="quote-slider">
-                <div class="single-core-value single-core-01">
-                    <span class="style-animate-dot-wrap">
-                        <span class="style-animate-dot dot-zero"></span>
-                    </span>
-                    <p class="d-inline-block">Compassion</p>
-                </div>
-                <div class="single-core-value single-core-01">
-                    <span class="style-animate-dot-wrap">
-                        <span class="style-animate-dot dot-zero"></span>
-                    </span>
-                    <p class="d-inline-block">Commitment</p>
-                </div>
-                <div class="single-core-value single-core-01">
-                    <span class="style-animate-dot-wrap">
-                        <span class="style-animate-dot"></span>
-                    </span>
-                    <p class="d-inline-block">Excellence</p>
-                </div>
-                <div class="single-core-value single-core-01">
-                    <span class="style-animate-dot-wrap">
-                        <span class="style-animate-dot"></span>
-                    </span>
-                    <p class="d-inline-block">Team Work</p>
-                </div>
-                <div class="single-core-value single-core-01">
-                    <span class="style-animate-dot-wrap">
-                        <span class="style-animate-dot"></span>
-                    </span>
-                    <p class="d-inline-block">Value</p>
-                </div>
-                <div class="single-core-value single-core-01">
-                    <span class="style-animate-dot-wrap">
-                        <span class="style-animate-dot"></span>
-                    </span>
-                    <p class="d-inline-block">Ethnicity</p>
-                </div>
-                <div class="single-core-value single-core-01">
-                    <span class="style-animate-dot-wrap">
-                        <span class="style-animate-dot"></span>
-                    </span>
-                    <p class="d-inline-block">Excellence</p>
-                </div>
-                <div class="single-core-value single-core-01">
-                    <span class="style-animate-dot-wrap">
-                        <span class="style-animate-dot"></span>
-                    </span>
-                    <p class="d-inline-block">Commitment</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- get a quote area  end-->
-
-
-
-
-
-    <!-- history area  -->
     <div class="history-area margin-bottom-120">
         <div class="container">
             <div class="row align-items-center">
@@ -701,6 +510,92 @@
         </div>
     </div>
     <!-- history area end -->
+
+
+
+
+    <!-- get a quote area  -->
+    <div class="get-quote margin-bottom-120 ">
+        <div class="container">
+            <div class="row align-items-center get-flex-reverse">
+                <div class="col-md-12">
+                    <div class="quote-message">
+                        <p style="padding:1em;">As the leader in security services provider, we can help you to
+                            customize
+                            your personal or commercial premises to meet your safety needs.
+                        </p>
+                        <div class="btn-wrap d-inline-block">
+                            <a class="btn btn-border-base" href="{{ url('/enquiry')}}">
+                                <span class="top_left"></span>
+                                <span class="top_right"></span>
+                                <span>
+                                    GET A QUOTE</span>
+                                <span class="bottom_left"></span>
+                                <span class="bottom_right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quote-slider">
+                <div class="single-core-value single-core-01">
+                    <span class="style-animate-dot-wrap">
+                        <span class="style-animate-dot dot-zero"></span>
+                    </span>
+                    <p class="d-inline-block">Compassion</p>
+                </div>
+                <div class="single-core-value single-core-01">
+                    <span class="style-animate-dot-wrap">
+                        <span class="style-animate-dot dot-zero"></span>
+                    </span>
+                    <p class="d-inline-block">Commitment</p>
+                </div>
+                <div class="single-core-value single-core-01">
+                    <span class="style-animate-dot-wrap">
+                        <span class="style-animate-dot"></span>
+                    </span>
+                    <p class="d-inline-block">Excellence</p>
+                </div>
+                <div class="single-core-value single-core-01">
+                    <span class="style-animate-dot-wrap">
+                        <span class="style-animate-dot"></span>
+                    </span>
+                    <p class="d-inline-block">Team Work</p>
+                </div>
+                <div class="single-core-value single-core-01">
+                    <span class="style-animate-dot-wrap">
+                        <span class="style-animate-dot"></span>
+                    </span>
+                    <p class="d-inline-block">Value</p>
+                </div>
+                <div class="single-core-value single-core-01">
+                    <span class="style-animate-dot-wrap">
+                        <span class="style-animate-dot"></span>
+                    </span>
+                    <p class="d-inline-block">Ethnicity</p>
+                </div>
+                <div class="single-core-value single-core-01">
+                    <span class="style-animate-dot-wrap">
+                        <span class="style-animate-dot"></span>
+                    </span>
+                    <p class="d-inline-block">Excellence</p>
+                </div>
+                <div class="single-core-value single-core-01">
+                    <span class="style-animate-dot-wrap">
+                        <span class="style-animate-dot"></span>
+                    </span>
+                    <p class="d-inline-block">Commitment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- get a quote area  end-->
+
+
+
+
+
+
 
 
 

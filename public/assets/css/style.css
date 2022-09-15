@@ -6498,7 +6498,7 @@ blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-sty
   border: 1px solid #DFDFDF;
 }
 .service-single-item-2 .thumb img {
-  visibility: hidden;
+  visibility: visible;
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -15299,7 +15299,7 @@ ul.blocks-gallery-grid li:before {
 }
 .service-single-item-2 {
 
-  background-color: gray !important;
+ /* background-color: gray !important; */
 
 }
 .bg-client {background-color: tomato;}
@@ -15491,3 +15491,28 @@ ul.blocks-gallery-grid li:before {
     width: 90% !important ;
   }
  /* New Review Changes by Mr Brain  End */
+
+
+
+ .marquee-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #ac0104 !important;
+
+
+  }
+
+  .newImg{
+    width:100px !important;
+    height: auto !important;
+  }
+  .homeForm{
+    padding-left: 20px;
+    padding-right: 20px;
+  }

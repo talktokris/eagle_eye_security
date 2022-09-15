@@ -26,11 +26,57 @@ class PagesController extends Controller
 {
     //
 
-    public function index(){
+    public function index(Request $request){
+
+        $toAdminEmail='talktokris@gmail.com';
 
         $pageData = Service_list::where('status','=',1)->orderBy('id', 'DESC')->get();
         $clientData = Clients_list::where('status','=',1)->orderBy('id', 'DESC')->get();
         $newsData = News_notice_list::where('status','=',1)->orderBy('id', 'DESC')->get();
+
+
+
+        if($request->isMethod('post')){
+            $data=$request->all();
+
+
+        $validatedData = $request->validate([
+            'title' => 'required|string|min:2|max:10',
+            'name' => 'required|string|min:5|max:150',
+            'email' => 'required|email|max:150',
+            'phone' => 'required|string|min:7|max:15',
+            'message' => 'required|string|min:15|max:150',
+
+            ]);
+
+
+            $data= $request->all();
+            $newsSave = new Enquiry_list;
+            $newsSave->title= $data['title'];
+            $newsSave->name= $data['name'];
+            $newsSave->email= $data['email'];
+            $newsSave->phone= $data['phone'];
+            $newsSave->message= $data['message'];
+            $newsSave->save();
+
+
+            if(!$newsSave){      return redirect('/')->with('flash_message_error', 'Internal error. Please email to support@ealgeeyesecurity.com.my'); }
+            else {
+
+                $details = [
+
+                    'title' => $data['title'],
+                    'name' =>  $data['name'],
+                    'email' =>  $data['email'],
+                    'phone' =>  $data['phone'],
+                    'message' => $data['message'],
+
+                ];
+                Mail::to($toAdminEmail)->send(new EnquiryMail($details));
+
+                return redirect('/')->with('flash_message_success', 'Your enquiry has been submitted successfully');}
+
+        }
 
 
         return view("public.homePage")->with(compact("pageData"))->with(compact("clientData"))->with(compact("newsData"));

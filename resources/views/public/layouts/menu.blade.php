@@ -38,7 +38,7 @@ if(($CurrentRoute=="contact")||($CurrentRoute=="enquiry-store")){   $contactPage
             <ul class="navbar-nav">
 
                 <li><a href="{{ url("/") }}"  class="<?php echo $homePageActive;?>"><span>HOME</span> </a></li>
-                <li><a href="{{ url("/home-old") }}"><span>Home Old</span> </a></li>
+           <?php /*     <li><a href="{{ url("/home-old") }}"><span>Home Old</span> </a></li> */ ?>
 
 
 
@@ -92,3 +92,57 @@ if(($CurrentRoute=="contact")||($CurrentRoute=="enquiry-store")){   $contactPage
         </div>
     </div>
 </nav>
+
+
+  <!-- Marquee area start  -->
+
+  <div class="marquee-area">
+    <div class="container-fluid">
+        <marquee class="h5" style="color:wheat;" direction="left" scrollamount="3" align="middle" border="1">
+            &nbsp;&nbsp; &nbsp;&nbsp; &bull;	Body Guards
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Gurkha Guards
+
+            &nbsp; &nbsp; &nbsp; &nbsp;&bull;	Premium Local Guards
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Guard Dog with Handlers
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Smart CCTV / CMS
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Patrolling Unit
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Car Park Barrier
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Card Access Systems
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Infrared System
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Burglar Alarm System
+
+            &nbsp; &nbsp; &nbsp; &nbsp;  &bull;	Security Consultancy
+
+            &nbsp;&nbsp; &nbsp;&nbsp; &bull;	Body Guards
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Gurkha Guards
+
+            &nbsp; &nbsp; &nbsp; &nbsp;&bull;	Premium Local Guards
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Guard Dog with Handlers
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Smart CCTV / CMS
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Patrolling Unit
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Car Park Barrier
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Card Access Systems
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Infrared System
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &bull;	Burglar Alarm System
+
+            &nbsp; &nbsp; &nbsp; &nbsp;  &bull;	Security Consultancy
+        </marquee>
+    </div>
+</div>
+   <!-- Marquee area end  -->
